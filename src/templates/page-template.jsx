@@ -1,22 +1,25 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 import PageTemplateDetails from '../components/PageTemplateDetails';
+import Layout from '../components/layout';
 
 class PageTemplate extends React.Component {
   render() {
-    const { title, subtitle } = this.props.data.site.siteMetadata;
-    const page = this.props.data.markdownRemark;
+    const { data } = this.props;
+    const { title, subtitle } = data.site.siteMetadata;
+    const page = data.markdownRemark;
     const { title: pageTitle, description: pageDescription } = page.frontmatter;
     const description = pageDescription !== null ? pageDescription : subtitle;
 
     return (
-      <div>
+      <Layout>
         <Helmet>
           <title>{`${pageTitle} - ${title}`}</title>
           <meta name="description" content={description} />
         </Helmet>
         <PageTemplateDetails {...this.props} />
-      </div>
+      </Layout>
     );
   }
 }

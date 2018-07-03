@@ -1,13 +1,14 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import kebabCase from 'lodash/kebabCase';
 import Sidebar from '../components/Sidebar';
 
 class TagsRoute extends React.Component {
   render() {
-    const { title } = this.props.data.site.siteMetadata;
-    const tags = this.props.data.allMarkdownRemark.group;
+    const { data } = this.props;
+    const { title } = data.site.siteMetadata;
+    const tags = data.allMarkdownRemark.group;
 
     return (
       <div>
@@ -22,7 +23,10 @@ class TagsRoute extends React.Component {
                   <ul className="tags__list">
                     {tags.map(tag => (
                       <li key={tag.fieldValue} className="tags__list-item">
-                        <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} className="tags__list-item-link">
+                        <Link
+                          to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                          className="tags__list-item-link"
+                        >
                           {tag.fieldValue} ({tag.totalCount})
                         </Link>
                       </li>

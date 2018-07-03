@@ -1,10 +1,11 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import './style.scss';
 
 class Menu extends React.Component {
   render() {
-    const menu = this.props.data;
+    const { data } = this.props;
+    const menu = data;
 
     const menuBlock = (
       <ul className="menu__list">
@@ -23,11 +24,7 @@ class Menu extends React.Component {
       </ul>
     );
 
-    return (
-      <nav className="menu">
-        {menuBlock}
-      </nav>
-    );
+    return <nav className="menu">{menuBlock}</nav>;
   }
 }
 

@@ -1,19 +1,22 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 import Sidebar from '../components/Sidebar';
 import TagTemplateDetails from '../components/TagTemplateDetails';
+import Layout from '../components/layout';
 
 class TagTemplate extends React.Component {
   render() {
-    const { title } = this.props.data.site.siteMetadata;
-    const { tag } = this.props.pathContext;
+    const { data, pageContext } = this.props;
+    const { title } = data.site.siteMetadata;
+    const { tag } = pageContext;
 
     return (
-      <div>
+      <Layout>
         <Helmet title={`All Posts tagged as "${tag}" - ${title}`} />
         <Sidebar {...this.props} />
         <TagTemplateDetails {...this.props} />
-      </div>
+      </Layout>
     );
   }
 }
@@ -43,10 +46,16 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-        limit: 1000,
-        filter: { frontmatter: { tags: { in: [$tag] }, layout: { eq: "post" }, draft: { ne: true } } },
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ){
+      limit: 1000
+      filter: {
+        frontmatter: {
+          tags: { in: [$tag] }
+          layout: { eq: "post" }
+          draft: { ne: true }
+        }
+      }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           fields {

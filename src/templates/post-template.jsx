@@ -1,22 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 import PostTemplateDetails from '../components/PostTemplateDetails';
+import Layout from '../components/layout';
 
-class PostTemplate extends React.Component {
+class PostTemplate extends Component {
   render() {
-    const { title, subtitle } = this.props.data.site.siteMetadata;
-    const post = this.props.data.markdownRemark;
+    const { data } = this.props;
+    const { title, subtitle } = data.site.siteMetadata;
+    const post = data.markdownRemark;
     const { title: postTitle, description: postDescription } = post.frontmatter;
     const description = postDescription !== null ? postDescription : subtitle;
 
     return (
-      <div>
+      <Layout>
         <Helmet>
           <title>{`${postTitle} - ${title}`}</title>
           <meta name="description" content={description} />
         </Helmet>
         <PostTemplateDetails {...this.props} />
-      </div>
+      </Layout>
     );
   }
 }
@@ -34,7 +37,6 @@ export const pageQuery = graphql`
           name
           twitter
         }
-        disqusShortname
         url
       }
     }

@@ -1,16 +1,18 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import kebabCase from 'lodash/kebabCase';
 import Sidebar from '../components/Sidebar';
+import Layout from '../components/layout';
 
 class CategoriesRoute extends React.Component {
   render() {
-    const { title } = this.props.data.site.siteMetadata;
-    const categories = this.props.data.allMarkdownRemark.group;
+    const { data } = this.props;
+    const { title } = data.site.siteMetadata;
+    const categories = data.allMarkdownRemark.group;
 
     return (
-      <div>
+      <Layout>
         <Helmet title={`All Categories - ${title}`} />
         <Sidebar {...this.props} />
         <div className="content">
@@ -21,8 +23,14 @@ class CategoriesRoute extends React.Component {
                 <div className="categories">
                   <ul className="categories__list">
                     {categories.map(category => (
-                      <li key={category.fieldValue} className="categories__list-item">
-                        <Link to={`/categories/${kebabCase(category.fieldValue)}/`} className="categories__list-item-link">
+                      <li
+                        key={category.fieldValue}
+                        className="categories__list-item"
+                      >
+                        <Link
+                          to={`/categories/${kebabCase(category.fieldValue)}/`}
+                          className="categories__list-item-link"
+                        >
                           {category.fieldValue} ({category.totalCount})
                         </Link>
                       </li>
@@ -33,7 +41,7 @@ class CategoriesRoute extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </Layout>
     );
   }
 }

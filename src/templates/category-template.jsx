@@ -1,19 +1,22 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 import Sidebar from '../components/Sidebar';
 import CategoryTemplateDetails from '../components/CategoryTemplateDetails';
+import Layout from '../components/layout';
 
 class CategoryTemplate extends React.Component {
   render() {
-    const { title } = this.props.data.site.siteMetadata;
-    const { category } = this.props.pathContext;
+    const { data, pageContext } = this.props;
+    const { title } = data.site.siteMetadata;
+    const { category } = pageContext;
 
     return (
-      <div>
+      <Layout>
         <Helmet title={`${category} - ${title}`} />
         <Sidebar {...this.props} />
         <CategoryTemplateDetails {...this.props} />
-      </div>
+      </Layout>
     );
   }
 }
@@ -43,10 +46,16 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-        limit: 1000,
-        filter: { frontmatter: { category: { eq: $category }, layout: { eq: "post" }, draft: { ne: true } } },
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ){
+      limit: 1000
+      filter: {
+        frontmatter: {
+          category: { eq: $category }
+          layout: { eq: "post" }
+          draft: { ne: true }
+        }
+      }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           fields {
