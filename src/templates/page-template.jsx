@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import PageTemplateDetails from '../components/PageTemplateDetails';
 import Layout from '../components/layout';
+import Favicon from '../assets/favicon.png';
 
-class PageTemplate extends React.Component {
+class PageTemplate extends Component {
   render() {
     const { data } = this.props;
     const { title, subtitle } = data.site.siteMetadata;
@@ -17,6 +18,7 @@ class PageTemplate extends React.Component {
         <Helmet>
           <title>{`${pageTitle} - ${title}`}</title>
           <meta name="description" content={description} />
+          <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
         <PageTemplateDetails {...this.props} />
       </Layout>
@@ -40,11 +42,8 @@ export const pageQuery = graphql`
         author {
           name
           email
-          telegram
           twitter
           github
-          rss
-          vk
         }
       }
     }

@@ -10,7 +10,13 @@ class Sidebar extends React.Component {
   render() {
     const { location } = this.props;
     const { data } = this.props;
-    const { author, subtitle, copyright, menu } = data.site.siteMetadata;
+    const {
+      author,
+      welcome,
+      subtitle,
+      copyright,
+      menu
+    } = data.site.siteMetadata;
     const isHomePage = get(location, 'pathname', '/') === '/';
 
     /* eslint-disable jsx-a11y/img-redundant-alt */
@@ -20,21 +26,21 @@ class Sidebar extends React.Component {
           <img
             src={profilePic}
             className="sidebar__author-photo"
-            width="75"
-            height="75"
+            width="150"
+            height="150"
             alt={author.name}
           />
         </Link>
         {isHomePage ? (
           <h1 className="sidebar__author-title">
             <Link className="sidebar__author-title-link" to="/">
-              {author.name}
+              {welcome}
             </Link>
           </h1>
         ) : (
           <h2 className="sidebar__author-title">
             <Link className="sidebar__author-title-link" to="/">
-              {author.name}
+              {welcome}
             </Link>
           </h2>
         )}

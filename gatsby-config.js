@@ -3,33 +3,35 @@ const pxtorem = require('postcss-pxtorem');
 
 module.exports = {
   siteMetadata: {
-    url: 'https://lumen.netlify.com',
-    title: 'Blog by John Doe',
+    url: 'https://melanieseltzer.io',
+    title: 'Melanie Seltzer',
+    welcome: "Hi! I'm Melanie 👋",
     subtitle:
-      'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-    copyright: '© All rights reserved.',
+      "I'm a Front End Developer living in sunny Los Angeles. I enjoy creating cool stuff and learning everything I can in the process 😄",
+    copyright: 'Made with ❤️ using Gatsby.js',
     menu: [
       {
-        label: 'Articles',
+        label: 'Projects',
         path: '/'
       },
       {
-        label: 'About me',
-        path: '/about/'
+        label: 'Writing',
+        path: '/blog'
       },
       {
-        label: 'Contact me',
-        path: '/contact/'
+        label: 'About',
+        path: '/about'
+      },
+      {
+        label: 'Contact',
+        path: '/contact'
       }
     ],
     author: {
-      name: 'John Doe',
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vk: '#'
+      name: 'Melanie',
+      email: 'melleh11@gmail.com',
+      twitter: 'melanieseltzer',
+      github: 'melanieseltzer'
     }
   },
   plugins: [
@@ -106,7 +108,7 @@ module.exports = {
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: 'gatsby-plugin-sass',
       options: {
         postCssPlugins: [
           lost(),

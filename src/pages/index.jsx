@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Post from '../components/Post';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/layout';
+import Favicon from '../assets/favicon.png';
 
 class IndexRoute extends React.Component {
   render() {
@@ -20,6 +21,7 @@ class IndexRoute extends React.Component {
         <Helmet>
           <title>{title}</title>
           <meta name="description" content={subtitle} />
+          <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
         <Sidebar {...this.props} />
         <div className="content">
@@ -37,6 +39,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        welcome
         subtitle
         copyright
         menu {
@@ -46,11 +49,8 @@ export const pageQuery = graphql`
         author {
           name
           email
-          telegram
           twitter
           github
-          rss
-          vk
         }
       }
     }

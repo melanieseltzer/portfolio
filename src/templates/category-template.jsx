@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Sidebar from '../components/Sidebar';
 import CategoryTemplateDetails from '../components/CategoryTemplateDetails';
 import Layout from '../components/layout';
 
-class CategoryTemplate extends React.Component {
+class CategoryTemplate extends Component {
   render() {
     const { data, pageContext } = this.props;
     const { title } = data.site.siteMetadata;
@@ -28,6 +28,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        welcome
         subtitle
         copyright
         menu {
@@ -37,11 +38,8 @@ export const pageQuery = graphql`
         author {
           name
           email
-          telegram
           twitter
           github
-          rss
-          vk
         }
       }
     }

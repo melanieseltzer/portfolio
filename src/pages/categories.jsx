@@ -53,6 +53,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        welcome
         subtitle
         copyright
         menu {
@@ -62,11 +63,8 @@ export const pageQuery = graphql`
         author {
           name
           email
-          telegram
           twitter
           github
-          rss
-          vk
         }
       }
     }

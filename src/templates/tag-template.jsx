@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Sidebar from '../components/Sidebar';
 import TagTemplateDetails from '../components/TagTemplateDetails';
 import Layout from '../components/layout';
 
-class TagTemplate extends React.Component {
+class TagTemplate extends Component {
   render() {
     const { data, pageContext } = this.props;
     const { title } = data.site.siteMetadata;
@@ -37,11 +37,8 @@ export const pageQuery = graphql`
         author {
           name
           email
-          telegram
           twitter
           github
-          rss
-          vk
         }
       }
     }
