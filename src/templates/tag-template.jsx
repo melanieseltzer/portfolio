@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import Menu from '../components/Menu';
 import Sidebar from '../components/Sidebar';
 import TagTemplateDetails from '../components/TagTemplateDetails';
 import Layout from '../components/layout';
@@ -8,12 +9,13 @@ import Layout from '../components/layout';
 class TagTemplate extends Component {
   render() {
     const { data, pageContext } = this.props;
-    const { title } = data.site.siteMetadata;
+    const { title, menu } = data.site.siteMetadata;
     const { tag } = pageContext;
 
     return (
       <Layout>
-        <Helmet title={`All Posts tagged as "${tag}" - ${title}`} />
+        <Helmet title={`Posts tagged: "${tag}" - ${title}`} />
+        <Menu data={menu} />
         <Sidebar {...this.props} />
         <TagTemplateDetails {...this.props} />
       </Layout>

@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import moment from 'moment';
 import './style.scss';
 
-class Post extends Component {
+class Project extends Component {
   render() {
     const { data } = this.props;
     const { title, date, category, description } = data.node.frontmatter;
@@ -32,11 +32,11 @@ class Post extends Component {
         </h2>
         <p className="post__description">{description}</p>
         <Link className="post__readmore" to={slug}>
-          Read
+          View Project
         </Link>
       </div>
     );
   }
 }
 
-export default Post;
+export default Project;

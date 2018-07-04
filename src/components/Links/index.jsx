@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './style.scss';
 import '../../assets/fonts/fontello-771c82e0/css/fontello.css';
 
-class Links extends React.Component {
+class Links extends Component {
   render() {
     const { data } = this.props;
     const author = data;

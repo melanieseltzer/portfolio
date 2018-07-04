@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Post from '../Post';
 
-class CategoryTemplateDetails extends React.Component {
+class CategoryTemplateDetails extends Component {
   render() {
     const items = [];
     const { data, pageContext } = this.props;

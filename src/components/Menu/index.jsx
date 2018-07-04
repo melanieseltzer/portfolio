@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import './style.scss';
 
-class Menu extends React.Component {
+class Menu extends Component {
   render() {
     const { data } = this.props;
     const menu = data;

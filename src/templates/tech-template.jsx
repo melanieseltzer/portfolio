@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import Menu from '../components/Menu';
 import Sidebar from '../components/Sidebar';
 import TechTemplateDetails from '../components/TechTemplateDetails';
 import Layout from '../components/layout';
@@ -8,12 +9,13 @@ import Layout from '../components/layout';
 class TechTemplate extends Component {
   render() {
     const { data, pageContext } = this.props;
-    const { title } = data.site.siteMetadata;
+    const { title, menu } = data.site.siteMetadata;
     const { tech } = pageContext;
 
     return (
       <Layout>
-        <Helmet title={`Tech: "${tech}" - ${title}`} />
+        <Helmet title={`Projects Made With: "${tech}" - ${title}`} />
+        <Menu data={menu} />
         <Sidebar {...this.props} />
         <TechTemplateDetails {...this.props} />
       </Layout>

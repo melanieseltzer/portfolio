@@ -1,22 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import moment from 'moment';
 import './style.scss';
 
-class ProjectTemplateDetails extends React.Component {
+class ProjectTemplateDetails extends Component {
   render() {
     const { data } = this.props;
     const { subtitle, author } = data.site.siteMetadata;
     const project = data.markdownRemark;
     const tech = project.fields.techSlugs;
-
-    const homeBlock = (
-      <div>
-        <Link className="post-single__home-button" to="/">
-          All Projects
-        </Link>
-      </div>
-    );
 
     const tagsBlock = (
       <div className="post-single__tags">
@@ -35,7 +27,6 @@ class ProjectTemplateDetails extends React.Component {
 
     return (
       <div>
-        {homeBlock}
         <div className="post-single">
           <div className="post-single__inner">
             <h1 className="post-single__title">{project.frontmatter.title}</h1>

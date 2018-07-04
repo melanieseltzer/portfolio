@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import PageTemplateDetails from '../components/PageTemplateDetails';
+import Menu from '../components/Menu';
 import Layout from '../components/layout';
 import Favicon from '../assets/favicon.png';
 
 class PageTemplate extends Component {
   render() {
     const { data } = this.props;
-    const { title, subtitle } = data.site.siteMetadata;
+    const { title, subtitle, menu } = data.site.siteMetadata;
     const page = data.markdownRemark;
     const { title: pageTitle, description: pageDescription } = page.frontmatter;
     const description = pageDescription !== null ? pageDescription : subtitle;
@@ -20,6 +21,7 @@ class PageTemplate extends Component {
           <meta name="description" content={description} />
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
+        <Menu data={menu} />
         <PageTemplateDetails {...this.props} />
       </Layout>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import Menu from '../components/Menu';
 import Sidebar from '../components/Sidebar';
 import CategoryTemplateDetails from '../components/CategoryTemplateDetails';
 import Layout from '../components/layout';
@@ -8,12 +9,13 @@ import Layout from '../components/layout';
 class CategoryTemplate extends Component {
   render() {
     const { data, pageContext } = this.props;
-    const { title } = data.site.siteMetadata;
+    const { title, menu } = data.site.siteMetadata;
     const { category } = pageContext;
 
     return (
       <Layout>
         <Helmet title={`${category} - ${title}`} />
+        <Menu data={menu} />
         <Sidebar {...this.props} />
         <CategoryTemplateDetails {...this.props} />
       </Layout>

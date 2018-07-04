@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import kebabCase from 'lodash/kebabCase';
+import Menu from '../components/Menu';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/layout';
 
-class CategoriesRoute extends React.Component {
+class CategoriesRoute extends Component {
   render() {
     const { data } = this.props;
-    const { title } = data.site.siteMetadata;
+    const { title, menu } = data.site.siteMetadata;
     const categories = data.allMarkdownRemark.group;
 
     return (
       <Layout>
         <Helmet title={`All Categories - ${title}`} />
+        <Menu data={menu} />
         <Sidebar {...this.props} />
         <div className="content">
           <div className="content__inner">

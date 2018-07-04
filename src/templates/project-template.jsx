@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import ProjectTemplateDetails from '../components/ProjectTemplateDetails';
+import Menu from '../components/Menu';
 import Layout from '../components/layout';
 import Favicon from '../assets/favicon.png';
 
 class ProjectTemplate extends Component {
   render() {
     const { data } = this.props;
-    const { title, subtitle } = data.site.siteMetadata;
+    const { title, subtitle, menu } = data.site.siteMetadata;
     const project = data.markdownRemark;
     const {
       title: projectTitle,
@@ -24,6 +25,7 @@ class ProjectTemplate extends Component {
           <meta name="description" content={description} />
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
+        <Menu data={menu} />
         <ProjectTemplateDetails {...this.props} />
       </Layout>
     );
@@ -39,6 +41,10 @@ export const pageQuery = graphql`
         title
         subtitle
         copyright
+        menu {
+          label
+          path
+        }
         author {
           name
           twitter

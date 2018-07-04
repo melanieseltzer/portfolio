@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/layout';
 
-class NotFoundRoute extends React.Component {
+class NotFoundRoute extends Component {
   render() {
     return (
       <Layout>

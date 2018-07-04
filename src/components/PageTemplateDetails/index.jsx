@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Sidebar from '../Sidebar';
 import './style.scss';
 
-class PageTemplateDetails extends React.Component {
+class PageTemplateDetails extends Component {
   render() {
     const { data } = this.props;
     const page = data.markdownRemark;
