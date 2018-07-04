@@ -3,17 +3,16 @@
  */
 
 // Colors
-$color-base: #222;
-$color-primary: #5d93ff;
-$color-secondary: #f7a046;
+$color-base: #525151;
+$color-primary: tomato;
+$color-secondary: lighten($color-primary, 10%);
 
 $color-white: lighten($color-base, 100%);
-$color-gray: lighten($color-base, 40%);
 $color-gray-border: lighten($color-base, 77%);
-$color-gray-bg: lighten($color-base, 79%);
+$color-gray-bg: lighten($color-base, 50%);
 
 // Typographic
-$typographic-font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$typographic-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;;
 
 $typographic-root-font-size: 100;
 $typographic-base-font-size: 16px;

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import moment from 'moment';
-import './style.scss';
 
 class ProjectTemplateDetails extends Component {
   render() {
