@@ -1,35 +1,39 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import PostTemplateDetails from '../components/PostTemplateDetails';
+import ProjectTemplateDetails from '../components/ProjectTemplateDetails';
 import Layout from '../components/layout';
 import Favicon from '../assets/favicon.png';
 
-class PostTemplate extends Component {
+class ProjectTemplate extends Component {
   render() {
     const { data } = this.props;
     const { title, subtitle } = data.site.siteMetadata;
-    const post = data.markdownRemark;
-    const { title: postTitle, description: postDescription } = post.frontmatter;
-    const description = postDescription !== null ? postDescription : subtitle;
+    const project = data.markdownRemark;
+    const {
+      title: projectTitle,
+      description: projectDescription
+    } = project.frontmatter;
+    const description =
+      projectDescription !== null ? projectDescription : subtitle;
 
     return (
       <Layout>
         <Helmet>
-          <title>{`${postTitle} - ${title}`}</title>
+          <title>{`${projectTitle} - ${title}`}</title>
           <meta name="description" content={description} />
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
-        <PostTemplateDetails {...this.props} />
+        <ProjectTemplateDetails {...this.props} />
       </Layout>
     );
   }
 }
 
-export default PostTemplate;
+export default ProjectTemplate;
 
 export const pageQuery = graphql`
-  query PostBySlug($slug: String!) {
+  query ProjectBySlug($slug: String!) {
     site {
       siteMetadata {
         title
@@ -46,13 +50,14 @@ export const pageQuery = graphql`
       id
       html
       fields {
-        tagSlugs
+        techSlugs
       }
       frontmatter {
         title
-        tags
         date
+        tech
         description
+        repo
       }
     }
   }

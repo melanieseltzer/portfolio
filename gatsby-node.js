@@ -1,8 +1,6 @@
 const _ = require('lodash');
 const Promise = require('bluebird');
 const path = require('path');
-const lost = require('lost');
-const pxtorem = require('postcss-pxtorem');
 const slash = require('slash');
 
 exports.createPages = ({ graphql, actions }) => {
@@ -15,6 +13,10 @@ exports.createPages = ({ graphql, actions }) => {
     const categoryTemplate = path.resolve(
       './src/templates/category-template.jsx'
     );
+    const projectTemplate = path.resolve(
+      './src/templates/project-template.jsx'
+    );
+    const techTemplate = path.resolve('./src/templates/tech-template.jsx');
 
     graphql(`
       {
@@ -31,6 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
                 tags
                 layout
                 category
+                tech
               }
             }
           }
@@ -85,6 +88,27 @@ exports.createPages = ({ graphql, actions }) => {
               context: { category }
             });
           });
+        } else if (_.get(edge, 'node.frontmatter.layout') === 'project') {
+          createPage({
+            path: edge.node.fields.slug,
+            component: slash(projectTemplate),
+            context: { slug: edge.node.fields.slug }
+          });
+
+          let technologies = [];
+          if (_.get(edge, 'node.frontmatter.tech')) {
+            technologies = technologies.concat(edge.node.frontmatter.tech);
+          }
+
+          technologies = _.uniq(technologies);
+          _.each(technologies, tech => {
+            const techPath = `/tech/${_.kebabCase(tech)}/`;
+            createPage({
+              path: techPath,
+              component: techTemplate,
+              context: { tech }
+            });
+          });
         }
       });
 
@@ -127,6 +151,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         node.frontmatter.category
       )}/`;
       createNodeField({ node, name: 'categorySlug', value: categorySlug });
+    }
+
+    if (node.frontmatter.tech) {
+      const techSlugs = node.frontmatter.tech.map(
+        tech => `/tech/${_.kebabCase(tech)}/`
+      );
+      createNodeField({
+        node,
+        name: 'techSlugs',
+        value: techSlugs
+      });
     }
   }
 };

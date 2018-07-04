@@ -11,12 +11,12 @@ module.exports = {
     copyright: 'Made with ❤️ using Gatsby.js',
     menu: [
       {
-        label: 'Projects',
+        label: 'Home',
         path: '/'
       },
       {
-        label: 'Writing',
-        path: '/blog'
+        label: 'Projects',
+        path: '/projects'
       },
       {
         label: 'About',

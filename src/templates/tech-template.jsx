@@ -1,41 +1,30 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import Post from '../components/Post';
 import Sidebar from '../components/Sidebar';
+import TechTemplateDetails from '../components/TechTemplateDetails';
 import Layout from '../components/layout';
-import Favicon from '../assets/favicon.png';
 
-class IndexRoute extends Component {
+class TechTemplate extends Component {
   render() {
-    const items = [];
-    const { data } = this.props;
-    const { title, subtitle } = data.site.siteMetadata;
-    const posts = data.allMarkdownRemark.edges;
-    posts.forEach(post => {
-      items.push(<Post data={post} key={post.node.fields.slug} />);
-    });
+    const { data, pageContext } = this.props;
+    const { title } = data.site.siteMetadata;
+    const { tech } = pageContext;
 
     return (
       <Layout>
-        <Helmet>
-          <title>{title}</title>
-          <meta name="description" content={subtitle} />
-          <link key="icon" rel="icon" href={Favicon} />
-        </Helmet>
+        <Helmet title={`Tech: "${tech}" - ${title}`} />
         <Sidebar {...this.props} />
-        <div className="content">
-          <div className="content__inner">{items}</div>
-        </div>
+        <TechTemplateDetails {...this.props} />
       </Layout>
     );
   }
 }
 
-export default IndexRoute;
+export default TechTemplate;
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query TechnologyPage($tech: String) {
     site {
       siteMetadata {
         title
@@ -56,7 +45,13 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 1000
-      filter: { frontmatter: { layout: { eq: "post" }, draft: { ne: true } } }
+      filter: {
+        frontmatter: {
+          tech: { in: [$tech] }
+          layout: { eq: "project" }
+          draft: { ne: true }
+        }
+      }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {

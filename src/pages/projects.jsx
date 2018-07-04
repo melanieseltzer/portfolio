@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import Post from '../components/Post';
+import Project from '../components/Project';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/layout';
 import Favicon from '../assets/favicon.png';
 
-class IndexRoute extends Component {
+class ProjectsRoute extends Component {
   render() {
     const items = [];
     const { data } = this.props;
     const { title, subtitle } = data.site.siteMetadata;
-    const posts = data.allMarkdownRemark.edges;
-    posts.forEach(post => {
-      items.push(<Post data={post} key={post.node.fields.slug} />);
+    const projects = data.allMarkdownRemark.edges;
+    projects.forEach(project => {
+      items.push(<Project data={project} key={project.node.fields.slug} />);
     });
 
     return (
@@ -32,10 +32,10 @@ class IndexRoute extends Component {
   }
 }
 
-export default IndexRoute;
+export default ProjectsRoute;
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query ProjectQuery {
     site {
       siteMetadata {
         title
@@ -56,20 +56,23 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 1000
-      filter: { frontmatter: { layout: { eq: "post" }, draft: { ne: true } } }
+      filter: {
+        frontmatter: { layout: { eq: "project" }, draft: { ne: true } }
+      }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
         node {
           fields {
             slug
-            categorySlug
+            techSlugs
           }
           frontmatter {
             title
             date
-            category
+            tech
             description
+            repo
           }
         }
       }

@@ -1,9 +1,9 @@
 ---
-title: Grabatar
-date: "2018-06-28T22:34:00"
-layout: project
+title: Test Article
+date: "2018-07-03T22:34:00"
+layout: post
 draft: false
-path: "/projects/grabatar"
+path: "/posts/test-article"
 category: "Web Apps"
 tags:
   - "React"
@@ -12,4 +12,4 @@ tags:
 description: "Easily grab your Gravatar 👾"
 ---
 
-Test
+Test article

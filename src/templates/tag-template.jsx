@@ -28,6 +28,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        welcome
         subtitle
         copyright
         menu {
