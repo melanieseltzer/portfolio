@@ -12,7 +12,7 @@ class TagsRoute extends Component {
   componentWillUpdate() {
     if (window.innerWidth < 685) {
       scrollToComponent(this.Content, {
-        offset: 0,
+        offset: -50,
         align: 'top',
         duration: 400
       });
@@ -39,9 +39,9 @@ class TagsRoute extends Component {
           }}
         >
           <div className="content__inner">
-            <div className="card">
-              <h1 className="card__title">All Tags</h1>
-              <div className="card__body">
+            <div className="page">
+              <h1 className="page__title">All Tags</h1>
+              <div className="page__body">
                 <div className="tags">
                   <ul className="tags__list">
                     {tags.map(tag => (

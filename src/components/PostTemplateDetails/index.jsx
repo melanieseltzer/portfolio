@@ -5,7 +5,6 @@ import moment from 'moment';
 class PostTemplateDetails extends Component {
   render() {
     const { data } = this.props;
-    const { subtitle, author } = data.site.siteMetadata;
     const post = data.markdownRemark;
     const tags = post.fields.tagSlugs;
 

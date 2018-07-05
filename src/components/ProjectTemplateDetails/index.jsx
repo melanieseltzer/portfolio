@@ -9,7 +9,6 @@ fontawesome.library.add(faGithubAlt);
 class ProjectTemplateDetails extends Component {
   render() {
     const { data } = this.props;
-    const { subtitle, author } = data.site.siteMetadata;
     const project = data.markdownRemark;
     const tech = project.fields.techSlugs;
 
