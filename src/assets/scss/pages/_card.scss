@@ -4,6 +4,7 @@
 .card {
   border-radius: 10px;
   transition: .3s ease;
+  overflow: hidden;
   &:hover {
     cursor: pointer;
     transform: scale(1.02);
@@ -19,11 +20,11 @@
   }
   &__button {
     background: $color-primary;
-    background: linear-gradient(to right, $color-primary, $color-secondary);
+    background: $primary-gradient;
     color: #ffdcd6;
     border-radius: 3px;
-    display: inline-block;
-    min-width: 70px;
+    display: block;
+    max-width: 70px;
     padding: 0.2rem;
     bottom: 1rem;
     right: 1rem;
@@ -37,6 +38,16 @@
   &__title {
     font-size: $typographic-base-font-size * 1.6875;
     &-custom {
+      .item-single__tags {
+        padding: 0;
+        display: inline-block;
+        ul li {
+          margin-top: 0;
+        }
+        @include breakpoint-md {
+          margin-left: 15px;
+        }
+      }
       @include margin-top(0);
       @include margin-bottom(0);
     }
@@ -60,6 +71,13 @@
       font-size: $typographic-base-font-size;
       @include line-height(1);
       @include margin-bottom(.75);
+  }
+  &__bottomContainer {
+    background: hsl(0, 0%, 97%);
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  &__topContainer {
+    padding: 1rem 2rem 0 2rem;
   }
   &__meta {
     @include margin-bottom(.75);

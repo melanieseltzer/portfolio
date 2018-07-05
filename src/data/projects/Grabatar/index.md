@@ -8,7 +8,7 @@ tech:
   - "React"
   - "React Router"
   - "Formik"
-description: "Easily grab your Gravatar 👾"
+description: "A small interface to easily 'grab' your Gravatar 👾"
 repo: "https://github.com/melanieseltzer/grabatar"
 ---
 

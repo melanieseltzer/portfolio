@@ -10,10 +10,41 @@ class Sidebar extends Component {
     const { location, data } = this.props;
     const { author, copyright } = data.site.siteMetadata;
     const { meta } = data.site.siteMetadata;
-    const isHomePage = get(location, 'pathname', '/') === '/';
-    const isProjectsPage = get(location, 'pathname') === '/projects';
-    const isAboutPage = get(location, 'pathname') === '/about';
-    const isContactPage = get(location, 'pathname') === '/contact';
+
+    const isPage = () => {
+      if (get(location, 'pathname', '/') === '/') {
+        return (
+          <div>
+            <h1 className="sidebar__author-title">{meta.home.heading}</h1>
+            <p className="sidebar__author-subtitle">{meta.home.subtitle}</p>
+          </div>
+        );
+      }
+      if (get(location, 'pathname') === '/projects') {
+        return (
+          <div>
+            <h1 className="sidebar__author-title">{meta.projects.heading}</h1>
+            <p className="sidebar__author-subtitle">{meta.projects.subtitle}</p>
+          </div>
+        );
+      }
+      if (get(location, 'pathname') === '/about') {
+        return (
+          <div>
+            <h1 className="sidebar__author-title">{meta.about.heading}</h1>
+            <p className="sidebar__author-subtitle">{meta.about.subtitle}</p>
+          </div>
+        );
+      }
+      if (get(location, 'pathname') === '/contact') {
+        return (
+          <div>
+            <h1 className="sidebar__author-title">{meta.contact.heading}</h1>
+            <p className="sidebar__author-subtitle">{meta.contact.subtitle}</p>
+          </div>
+        );
+      }
+    };
 
     /* eslint-disable jsx-a11y/img-redundant-alt */
     const authorBlock = (
@@ -27,38 +58,7 @@ class Sidebar extends Component {
             alt={author.name}
           />
         </Link>
-        {isHomePage ? (
-          <div>
-            <h1 className="sidebar__author-title">{meta.home.heading}</h1>
-            <p className="sidebar__author-subtitle">{meta.home.subtitle}</p>
-          </div>
-        ) : (
-          ''
-        )}
-        {isProjectsPage ? (
-          <div>
-            <h1 className="sidebar__author-title">{meta.projects.heading}</h1>
-            <p className="sidebar__author-subtitle">{meta.projects.subtitle}</p>
-          </div>
-        ) : (
-          ''
-        )}
-        {isAboutPage ? (
-          <div>
-            <h1 className="sidebar__author-title">{meta.about.heading}</h1>
-            <p className="sidebar__author-subtitle">{meta.about.subtitle}</p>
-          </div>
-        ) : (
-          ''
-        )}
-        {isContactPage ? (
-          <div>
-            <h1 className="sidebar__author-title">{meta.contact.heading}</h1>
-            <p className="sidebar__author-subtitle">{meta.contact.subtitle}</p>
-          </div>
-        ) : (
-          ''
-        )}
+        {isPage()}
       </div>
     );
     /* eslint-enable jsx-a11y/img-redundant-alt */
