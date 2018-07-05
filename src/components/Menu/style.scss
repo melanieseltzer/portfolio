@@ -25,6 +25,9 @@
       display: inline-block;
       margin: 0;
       padding: 0 0.9rem;
+      @media (max-width: 374px) {
+        padding: 0 0.5rem;
+      }
       &-link {
         font-size: $typographic-base-font-size * 1.1;
         color: $color-primary-lighten;
