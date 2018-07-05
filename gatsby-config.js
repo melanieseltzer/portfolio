@@ -11,7 +11,7 @@ module.exports = {
     copyright: 'Made with ❤️ using Gatsby.js',
     menu: [
       {
-        label: 'Posts',
+        label: 'Home',
         path: '/'
       },
       {

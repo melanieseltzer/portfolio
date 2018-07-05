@@ -10,12 +10,12 @@ class ProjectTemplateDetails extends Component {
     const tech = project.fields.techSlugs;
 
     const tagsBlock = (
-      <div className="post-single__tags">
-        <ul className="post-single__tags-list">
+      <div className="item-single__tags">
+        <ul className="item-single__tags-list">
           {tech &&
             tech.map((tag, i) => (
-              <li className="post-single__tags-list-item" key={tag}>
-                <Link to={tag} className="post-single__tags-list-item-link">
+              <li className="item-single__tags-list-item" key={tag}>
+                <Link to={tag} className="item-single__tags-list-item-link">
                   {project.frontmatter.tech[i]}
                 </Link>
               </li>
@@ -26,24 +26,24 @@ class ProjectTemplateDetails extends Component {
 
     return (
       <div>
-        <div className="post-single">
-          <div className="post-single__inner">
-            <h1 className="post-single__title">{project.frontmatter.title}</h1>
+        <div className="item-single">
+          <div className="item-single__inner">
+            <h1 className="item-single__title">{project.frontmatter.title}</h1>
             <div
-              className="post-single__body"
+              className="item-single__body"
               dangerouslySetInnerHTML={{ __html: project.html }}
             />
-            <div className="post-single__date">
+            <div className="item-single__date">
               <em>
                 Published{' '}
                 {moment(project.frontmatter.date).format('D MMM YYYY')}
               </em>
             </div>
           </div>
-          <div className="post-single__footer">
+          <div className="item-single__footer">
             {tagsBlock}
             <hr />
-            <p className="post-single__footer-text">
+            <p className="item-single__footer-text">
               {subtitle}
               <a
                 href={`https://twitter.com/${author.twitter}`}

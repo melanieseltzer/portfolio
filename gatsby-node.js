@@ -141,7 +141,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
     if (node.frontmatter.tags) {
       const tagSlugs = node.frontmatter.tags.map(
-        tag => `/tags/${_.kebabCase(tag)}/`
+        tag => `/tags/${_.kebabCase(tag)}`
       );
       createNodeField({ node, name: 'tagSlugs', value: tagSlugs });
     }
@@ -149,13 +149,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (typeof node.frontmatter.category !== 'undefined') {
       const categorySlug = `/categories/${_.kebabCase(
         node.frontmatter.category
-      )}/`;
+      )}`;
       createNodeField({ node, name: 'categorySlug', value: categorySlug });
     }
 
     if (node.frontmatter.tech) {
       const techSlugs = node.frontmatter.tech.map(
-        tech => `/tech/${_.kebabCase(tech)}/`
+        tech => `/tech/${_.kebabCase(tech)}`
       );
       createNodeField({
         node,

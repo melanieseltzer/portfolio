@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Sidebar from '../Sidebar';
+import './style.scss';
 
 class PageTemplateDetails extends Component {
   render() {
@@ -11,10 +12,10 @@ class PageTemplateDetails extends Component {
         <Sidebar {...this.props} />
         <div className="content">
           <div className="content__inner">
-            <div className="card">
-              <h1 className="card__title">{page.frontmatter.title}</h1>
+            <div className="page">
+              <h1 className="page__title">{page.frontmatter.title}</h1>
               <div
-                className="card__body"
+                className="page__body"
                 dangerouslySetInnerHTML={{ __html: page.html }}
               />
             </div>
