@@ -8,12 +8,6 @@ module.exports = {
     heading: "Hi! I'm Melanie 👋",
     subtitle:
       "I'm a Front End Developer living in sunny Los Angeles. I enjoy creating cool stuff and learning everything I can in the process 😄",
-    pages: {
-      about: {
-        heading: 'Contact',
-        subtitle: 'Test'
-      }
-    },
     copyright: 'Made with ❤️ using Gatsby.js',
     menu: [
       {
@@ -44,8 +38,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages'
+        path: `${__dirname}/src`,
+        name: 'data'
       }
     },
     {
