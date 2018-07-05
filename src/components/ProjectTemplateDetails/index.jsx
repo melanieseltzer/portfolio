@@ -37,9 +37,9 @@ class ProjectTemplateDetails extends Component {
 
     return (
       <div>
-        {homeBlock}
         <div className="item-single">
           <div className="item-single__inner">
+            {homeBlock}
             <h1 className="item-single__title">
               {project.frontmatter.title}
               <a

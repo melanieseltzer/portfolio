@@ -2,13 +2,14 @@
 @import "../../assets/scss/mixins";
 
 .card {
+  border-radius: 10px;
   transition: .3s ease;
   &:hover {
     cursor: pointer;
     transform: scale(1.02);
     box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.3);
   }
-  &:hover &__title {
+  &:hover &__title-custom {
     text-decoration: underline;
   }
   @include card();
@@ -16,8 +17,29 @@
   &:last-child {
     @include margin-bottom(.5);
   }
+  &__button {
+    background: $color-primary;
+    background: linear-gradient(to right, $color-primary, $color-secondary);
+    color: #ffdcd6;
+    border-radius: 3px;
+    display: inline-block;
+    min-width: 70px;
+    padding: 0.2rem;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: center;
+    &:hover,
+    &:focus {
+      background: $color-secondary;
+      color: #ffdcd6;
+    }
+  }
   &__title {
     font-size: $typographic-base-font-size * 1.6875;
+    &-custom {
+      @include margin-top(0);
+      @include margin-bottom(0);
+    }
     @include line-height(1.5);
     @include margin-top(0);
     @include margin-bottom(.5);

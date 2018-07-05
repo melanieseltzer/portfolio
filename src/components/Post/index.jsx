@@ -22,13 +22,15 @@ class Post extends Component {
         role="button"
         tabIndex={0}
       >
-        <h2 className="card__title">
-          <Link className="card__title-link" to={slug}>
+        <h2 className="card__title-custom">
+          <Link
+            className="card__title-link"
+            to={slug}
+            onClick={this.handleChildClick}
+          >
             {title}
           </Link>
         </h2>
-        <p className="card__description">{description}</p>
-        <hr />
         <div className="card__meta">
           <time
             className="card__meta-time"
@@ -47,6 +49,14 @@ class Post extends Component {
             </Link>
           </span>
         </div>
+        <p className="card__description">{description}</p>
+        <Link
+          className="card__button"
+          to={slug}
+          onClick={this.handleChildClick}
+        >
+          Read
+        </Link>
       </div>
     );
   }

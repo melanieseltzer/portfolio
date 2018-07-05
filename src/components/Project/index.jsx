@@ -40,12 +40,23 @@ class Project extends Component {
         role="button"
         tabIndex={0}
       >
-        <h2 className="card__title">
-          <Link className="card__title-link" to={slug}>
+        <h2 className="card__title-custom">
+          <Link
+            className="card__title-link"
+            to={slug}
+            onClick={this.handleChildClick}
+          >
             {title}
           </Link>
         </h2>
         <p className="card__description">{description}</p>
+        <Link
+          className="card__button"
+          to={slug}
+          onClick={this.handleChildClick}
+        >
+          View
+        </Link>
         <hr />
         {techBlock}
       </div>
