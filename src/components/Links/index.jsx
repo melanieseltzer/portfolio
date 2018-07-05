@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import fontawesome from '@fortawesome/fontawesome';
+import faGithubAlt from '@fortawesome/fontawesome-free-brands/faGithubAlt';
+import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
+import faCodepen from '@fortawesome/fontawesome-free-brands/faCodepen';
+import faEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
 import './style.scss';
-import '../../assets/fonts/fontello-771c82e0/css/fontello.css';
+
+fontawesome.library.add(faGithubAlt, faTwitter, faCodepen, faEnvelope);
 
 class Links extends Component {
   render() {
@@ -9,7 +15,8 @@ class Links extends Component {
     const links = {
       twitter: author.twitter,
       github: author.github,
-      email: author.email
+      email: author.email,
+      codepen: author.codepen
     };
 
     return (
@@ -21,7 +28,16 @@ class Links extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="icon-github" />
+              <i className="fab fa-github-alt" />
+            </a>
+          </li>
+          <li className="links__list-item">
+            <a
+              href={`https://codepen.io/${links.codepen}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-codepen" />
             </a>
           </li>
           <li className="links__list-item">
@@ -30,12 +46,12 @@ class Links extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="icon-twitter" />
+              <i className="fab fa-twitter" />
             </a>
           </li>
           <li className="links__list-item">
             <a href={`mailto:${links.email}`}>
-              <i className="icon-mail" />
+              <i className="far fa-envelope" />
             </a>
           </li>
         </ul>

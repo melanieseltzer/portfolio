@@ -31,7 +31,8 @@ module.exports = {
       name: 'Melanie',
       email: 'melleh11@gmail.com',
       twitter: 'melanieseltzer',
-      github: 'melanieseltzer'
+      github: 'melanieseltzer',
+      codepen: 'melanieseltzer'
     }
   },
   plugins: [

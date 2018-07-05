@@ -12,20 +12,20 @@
     margin: 10px -3px;
     &-item {
       padding: 0;
-      margin: 0;
+      margin: 0 5px;
       line-height: 24px;
       border-radius: 2.5rem;
       text-align: center;
       & a {
         border: 0;
-        & i {
+        & svg {
           font-size: 2rem;
           color: lighten($color-base, 20%);
         }
         &:hover,
         &:focus {
-          & i {
-            color: $color-base;
+          & svg {
+            color: $color-primary;
           }
         }
       }
