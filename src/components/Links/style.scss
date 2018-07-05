@@ -19,13 +19,15 @@
       & a {
         border: 0;
         & svg {
-          font-size: 2rem;
           color: lighten($color-base, 20%);
+          font-size: 2rem;
+          transition: .3s ease;
         }
         &:hover,
         &:focus {
           & svg {
             color: $color-primary;
+            transform: scale(1.1);
           }
         }
       }

@@ -25,17 +25,9 @@ class Sidebar extends Component {
           />
         </Link>
         {isHomePage ? (
-          <h1 className="sidebar__author-title">
-            <Link className="sidebar__author-title-link" to="/">
-              {heading}
-            </Link>
-          </h1>
+          <h1 className="sidebar__author-title">{heading}</h1>
         ) : (
-          <h2 className="sidebar__author-title">
-            <Link className="sidebar__author-title-link" to="/">
-              {heading}
-            </Link>
-          </h2>
+          <h2 className="sidebar__author-title">{heading}</h2>
         )}
         <p className="sidebar__author-subtitle">{subtitle}</p>
       </div>

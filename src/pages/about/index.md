@@ -8,6 +8,6 @@ I'm an Aussie developer with 8 years industry experience. I moved to USA in 2010
 
 I'm passionate about all things code and can usually be found tinkering around with something in my spare time.
 
-Some of my other loves include video games, hiking, traveling, annoying my cat, Callie 😼
+Some of my other loves include video games, hiking, traveling, and annoying my cat, *Callie* 👇
 
 ![callie.jpg](./callie.jpg)
