@@ -5,13 +5,19 @@ module.exports = {
   siteMetadata: {
     url: 'https://melanieseltzer.io',
     title: 'Melanie Seltzer',
-    welcome: "Hi! I'm Melanie 👋",
+    heading: "Hi! I'm Melanie 👋",
     subtitle:
       "I'm a Front End Developer living in sunny Los Angeles. I enjoy creating cool stuff and learning everything I can in the process 😄",
+    pages: {
+      about: {
+        heading: 'Contact',
+        subtitle: 'Test'
+      }
+    },
     copyright: 'Made with ❤️ using Gatsby.js',
     menu: [
       {
-        label: 'Home',
+        label: 'Posts',
         path: '/'
       },
       {

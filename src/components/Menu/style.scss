@@ -2,28 +2,42 @@
 @import "../../assets/scss/mixins";
 
 .menu {
+  background: $color-primary;
+  background: linear-gradient(to right, $color-primary, $color-secondary);
+  box-sizing: content-box;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+  position: fixed;
+  height: 3.75rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   &__list {
     list-style: none;
+    line-height: 3.75rem;
     padding: 0;
     margin: 0;
-    text-align: right;
+    text-align: center;
+    @include breakpoint-sm {
+      text-align: right;
+    }
     &-item {
       display: inline-block;
-      margin: 10px 0;
+      margin: 0;
       padding: 0 0.9rem;
       &-link {
-        font-size: $typographic-base-font-size;
-        color: $typographic-base-font-color;
+        font-size: $typographic-base-font-size * 1.1;
+        color: $color-primary-lighten;
         font-weight: 400;
         border: 0;
         &:hover,
         &:focus {
-          color: $color-primary;
-          border-bottom: 1px solid $color-primary;
+          color: $color-primary-lighten;
+          border-bottom: 2px solid $color-primary-lighten;
         }
         &--active {
-          color: $color-base;
-          border-bottom: 1px solid $color-base;
+          color: $color-primary-lighten;
+          border-bottom: 2px solid $color-primary-lighten;
         }
       }
     }

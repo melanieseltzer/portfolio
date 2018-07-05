@@ -5,6 +5,7 @@ import kebabCase from 'lodash/kebabCase';
 import Menu from '../components/Menu';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/layout';
+import Favicon from '../assets/favicon.png';
 
 class CategoriesRoute extends Component {
   render() {
@@ -14,14 +15,17 @@ class CategoriesRoute extends Component {
 
     return (
       <Layout>
-        <Helmet title={`All Categories - ${title}`} />
+        <Helmet>
+          <title>All Categories - {title}</title>
+          <link key="icon" rel="icon" href={Favicon} />
+        </Helmet>
         <Menu data={menu} />
         <Sidebar {...this.props} />
         <div className="content">
           <div className="content__inner">
-            <div className="page">
-              <h1 className="page__title">Categories</h1>
-              <div className="page__body">
+            <div className="card">
+              <h1 className="card__title">Categories</h1>
+              <div className="card__body">
                 <div className="categories">
                   <ul className="categories__list">
                     {categories.map(category => (
@@ -55,7 +59,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        welcome
+        heading
         subtitle
         copyright
         menu {

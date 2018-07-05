@@ -9,7 +9,7 @@ class Sidebar extends Component {
   render() {
     const { location } = this.props;
     const { data } = this.props;
-    const { author, welcome, subtitle, copyright } = data.site.siteMetadata;
+    const { author, heading, subtitle, copyright } = data.site.siteMetadata;
     const isHomePage = get(location, 'pathname', '/') === '/';
 
     /* eslint-disable jsx-a11y/img-redundant-alt */
@@ -27,13 +27,13 @@ class Sidebar extends Component {
         {isHomePage ? (
           <h1 className="sidebar__author-title">
             <Link className="sidebar__author-title-link" to="/">
-              {welcome}
+              {heading}
             </Link>
           </h1>
         ) : (
           <h2 className="sidebar__author-title">
             <Link className="sidebar__author-title-link" to="/">
-              {welcome}
+              {heading}
             </Link>
           </h2>
         )}

@@ -4,8 +4,10 @@
 
 // Colors
 $color-base: #525151;
-$color-primary: tomato;
-$color-secondary: lighten($color-primary, 10%);
+$color-primary: #ff6347;
+$color-secondary: #ff9147;
+
+$color-primary-lighten: lighten(tomato, 28%);
 
 $color-white: lighten($color-base, 100%);
 $color-gray-border: lighten($color-base, 77%);

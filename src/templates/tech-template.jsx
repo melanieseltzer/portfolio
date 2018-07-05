@@ -30,7 +30,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        welcome
+        heading
         subtitle
         copyright
         menu {

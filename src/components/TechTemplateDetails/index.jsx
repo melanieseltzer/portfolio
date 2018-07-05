@@ -14,12 +14,10 @@ class TechTemplateDetails extends Component {
     return (
       <div className="content">
         <div className="content__inner">
-          <div className="page">
-            <h1 className="page__title">
-              Projects Made With: &quot;{techTitle}&quot;
-            </h1>
-            <div className="page__body">{items}</div>
-          </div>
+          <h1 className="card__title">
+            Projects Made With: &quot;{techTitle}&quot;
+          </h1>
+          <div className="card__body">{items}</div>
         </div>
       </div>
     );

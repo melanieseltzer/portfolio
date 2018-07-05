@@ -31,7 +31,7 @@ class IndexRoute extends Component {
     return (
       <Layout>
         <Helmet>
-          <title>{title}</title>
+          <title>Hi! - {title}</title>
           <meta name="description" content={subtitle} />
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
@@ -57,7 +57,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        welcome
+        heading
         subtitle
         copyright
         menu {

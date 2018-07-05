@@ -5,6 +5,7 @@ import kebabCase from 'lodash/kebabCase';
 import Menu from '../components/Menu';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/layout';
+import Favicon from '../assets/favicon.png';
 
 class TagsRoute extends Component {
   render() {
@@ -14,14 +15,17 @@ class TagsRoute extends Component {
 
     return (
       <Layout>
-        <Helmet title={`All Tags - ${title}`} />
+        <Helmet>
+          <title>All Tags - {title}</title>
+          <link key="icon" rel="icon" href={Favicon} />
+        </Helmet>
         <Menu data={menu} />
         <Sidebar {...this.props} />
         <div className="content">
           <div className="content__inner">
-            <div className="page">
-              <h1 className="page__title">All Tags</h1>
-              <div className="page__body">
+            <div className="card">
+              <h1 className="card__title">All Tags</h1>
+              <div className="card__body">
                 <div className="tags">
                   <ul className="tags__list">
                     {tags.map(tag => (

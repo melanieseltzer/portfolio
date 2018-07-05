@@ -1,5 +1,5 @@
 ---
-title: "G'Day Mate"
+title: "About"
 layout: page
 path: "/about"
 ---

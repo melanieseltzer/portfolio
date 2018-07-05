@@ -31,8 +31,9 @@
       }
     }
     &-subtitle {
+      font-size: 1.1rem;
       color: $color-base;
-      @include line-height(1);
+      @include line-height(1.1);
       @include margin-bottom(1);
     }
   }
