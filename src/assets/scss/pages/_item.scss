@@ -17,6 +17,19 @@
     @include line-height(1.65);
     @include margin-top(1);
     @include margin-bottom(0);
+    .repo {
+      svg {
+        color: lighten($color-base, 20%);
+        font-size: 2rem;
+        transition: .3s ease;
+        margin-left: 10px;
+        &:hover,
+        &:focus {
+          color: $color-primary;
+          transform: scale(1.1);
+        }
+      }
+    }
   }
   &__body {
     & figure {
@@ -36,7 +49,10 @@
       }
     }
     & a {
-      text-decoration: underline;
+      text-decoration: none;
+      border-bottom: 2px solid $color-primary;
+      color: $color-base;
+      padding: 2px;
     }
     & .gatsby-highlight {
       max-width: $layout-post-single-width;

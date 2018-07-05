@@ -15,7 +15,7 @@
     @include line-height(1);
     @include margin(0, 0, 1);
   }
-  p a:not(.gatsby-resp-image-link) {
+  p a {
     border-bottom: 2px solid $color-primary;
     color: $color-base;
     padding: 2px;

@@ -11,6 +11,13 @@ class Post extends Component {
     return (
       <Link className="card__title-link" to={slug}>
         <div className="card">
+          <h2 className="card__title">
+            <Link className="card__title-link" to={slug}>
+              {title}
+            </Link>
+          </h2>
+          <p className="card__description">{description}</p>
+          <hr />
           <div className="card__meta">
             <time
               className="card__meta-time"
@@ -25,15 +32,6 @@ class Post extends Component {
               </Link>
             </span>
           </div>
-          <h2 className="card__title">
-            <Link className="card__title-link" to={slug}>
-              {title}
-            </Link>
-          </h2>
-          <p className="card__description">{description}</p>
-          <Link className="card__readmore" to={slug}>
-            Read
-          </Link>
         </div>
       </Link>
     );

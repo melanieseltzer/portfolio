@@ -31,11 +31,6 @@ class Project extends Component {
             </Link>
           </h2>
           <p className="card__description">{description}</p>
-          <p>
-            <Link className="card__readmore" to={slug}>
-              View Project
-            </Link>
-          </p>
           <hr />
           {techBlock}
         </div>

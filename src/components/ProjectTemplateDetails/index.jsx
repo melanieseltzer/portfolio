@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import moment from 'moment';
+import fontawesome from '@fortawesome/fontawesome';
+import faGithubAlt from '@fortawesome/fontawesome-free-brands/faGithubAlt';
+
+fontawesome.library.add(faGithubAlt);
 
 class ProjectTemplateDetails extends Component {
   render() {
@@ -37,7 +41,17 @@ class ProjectTemplateDetails extends Component {
         {homeBlock}
         <div className="item-single">
           <div className="item-single__inner">
-            <h1 className="item-single__title">{project.frontmatter.title}</h1>
+            <h1 className="item-single__title">
+              {project.frontmatter.title}
+              <a
+                className="repo"
+                href={project.frontmatter.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-github-alt" />
+              </a>
+            </h1>
             <div
               className="item-single__body"
               dangerouslySetInnerHTML={{ __html: project.html }}
@@ -50,18 +64,8 @@ class ProjectTemplateDetails extends Component {
             </div>
           </div>
           <div className="item-single__footer">
-            {tagsBlock}
             <hr />
-            <p className="item-single__footer-text">
-              {subtitle}
-              <a
-                href={`https://twitter.com/${author.twitter}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <br /> <strong>{author.name}</strong> on Twitter
-              </a>
-            </p>
+            {tagsBlock}
           </div>
         </div>
       </div>

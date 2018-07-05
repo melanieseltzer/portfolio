@@ -49,18 +49,8 @@ class PostTemplateDetails extends Component {
             </div>
           </div>
           <div className="item-single__footer">
-            {tagsBlock}
             <hr />
-            <p className="item-single__footer-text">
-              {subtitle}
-              <a
-                href={`https://twitter.com/${author.twitter}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <br /> <strong>{author.name}</strong> on Twitter
-              </a>
-            </p>
+            {tagsBlock}
           </div>
         </div>
       </div>
