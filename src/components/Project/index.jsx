@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
+import { Link, push } from 'gatsby';
 
 class Project extends Component {
+  // If we didn't have this, clicking on the tags
+  // would simply go to the parent link
+  handleChildClick = e => {
+    e.stopPropagation();
+  };
+
   render() {
     const { data } = this.props;
     const { title, description, tech } = data.node.frontmatter;
@@ -13,7 +19,11 @@ class Project extends Component {
           {techSlugs &&
             techSlugs.map((tag, i) => (
               <li className="item-single__tags-list-item" key={tag}>
-                <Link to={tag} className="item-single__tags-list-item-link">
+                <Link
+                  to={tag}
+                  onClick={this.handleChildClick}
+                  className="item-single__tags-list-item-link"
+                >
                   {tech[i]}
                 </Link>
               </li>
@@ -23,18 +33,22 @@ class Project extends Component {
     );
 
     return (
-      <Link className="card__title-link" to={slug}>
-        <div className="card">
-          <h2 className="card__title">
-            <Link className="card__title-link" to={slug}>
-              {title}
-            </Link>
-          </h2>
-          <p className="card__description">{description}</p>
-          <hr />
-          {techBlock}
-        </div>
-      </Link>
+      <div
+        className="card"
+        onClick={() => push(`${slug}`)}
+        onKeyPress={() => push(`${slug}`)}
+        role="button"
+        tabIndex={0}
+      >
+        <h2 className="card__title">
+          <Link className="card__title-link" to={slug}>
+            {title}
+          </Link>
+        </h2>
+        <p className="card__description">{description}</p>
+        <hr />
+        {techBlock}
+      </div>
     );
   }
 }
