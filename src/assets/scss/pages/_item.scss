@@ -96,8 +96,7 @@
   }
   &__home-button {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 0 0 1rem;
     max-width: 90px;
     font-size: $typographic-base-font-size;
     padding: 0 16px;
@@ -119,18 +118,18 @@
 }
 
 @include breakpoint-sm {
-    .item-single {
-        &__footer {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        &__body {
-            & .gatsby-highlight {
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
+  .item-single {
+    &__footer {
+      margin-left: auto;
+      margin-right: auto;
     }
+    &__body {
+      & .gatsby-highlight {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
 }
 
 @include breakpoint-md {
@@ -153,13 +152,6 @@
         @include line-height(1.125);
         @include margin-bottom(1.125);
       }
-    }
-    &__home-button {
-      position: fixed;
-      max-width: auto;
-      margin: 0;
-      top: 30px;
-      left: 30px;
     }
   }
 }

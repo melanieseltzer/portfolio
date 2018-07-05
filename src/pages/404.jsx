@@ -12,12 +12,11 @@ class NotFoundRoute extends Component {
     return (
       <Layout>
         <Menu data={menu} />
-        <Sidebar {...this.props} />
         <div className="content">
           <div className="content__inner">
-            <div className="card">
-              <h1 className="card__title">404 NOT FOUND</h1>
-              <div className="card__body">
+            <div className="page">
+              <h1 className="page__title">404 NOT FOUND</h1>
+              <div className="page__body">
                 <p>You just hit a route that doesn&#39;t exist... 😢</p>
               </div>
             </div>

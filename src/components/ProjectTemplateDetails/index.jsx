@@ -9,6 +9,14 @@ class ProjectTemplateDetails extends Component {
     const project = data.markdownRemark;
     const tech = project.fields.techSlugs;
 
+    const homeBlock = (
+      <div>
+        <Link className="item-single__home-button" to="/projects">
+          All Projects
+        </Link>
+      </div>
+    );
+
     const tagsBlock = (
       <div className="item-single__tags">
         <ul className="item-single__tags-list">
@@ -26,6 +34,7 @@ class ProjectTemplateDetails extends Component {
 
     return (
       <div>
+        {homeBlock}
         <div className="item-single">
           <div className="item-single__inner">
             <h1 className="item-single__title">{project.frontmatter.title}</h1>

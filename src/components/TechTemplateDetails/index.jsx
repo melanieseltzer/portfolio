@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
+import scrollToComponent from 'react-scroll-to-component';
 import Project from '../Project';
 
 class TechTemplateDetails extends Component {
+  componentWillUpdate() {
+    if (window.innerWidth < 685) {
+      scrollToComponent(this.Content, {
+        offset: 0,
+        align: 'top',
+        duration: 400
+      });
+    }
+  }
+
   render() {
     const items = [];
     const { data, pageContext } = this.props;
@@ -12,7 +23,12 @@ class TechTemplateDetails extends Component {
     });
 
     return (
-      <div className="content">
+      <div
+        className="content"
+        ref={section => {
+          this.Content = section;
+        }}
+      >
         <div className="content__inner">
           <h1 className="card__title">
             Projects Made With: &quot;{techTitle}&quot;

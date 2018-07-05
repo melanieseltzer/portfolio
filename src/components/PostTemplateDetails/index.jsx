@@ -9,6 +9,14 @@ class PostTemplateDetails extends Component {
     const post = data.markdownRemark;
     const tags = post.fields.tagSlugs;
 
+    const homeBlock = (
+      <div>
+        <Link className="item-single__home-button" to="/">
+          All Posts
+        </Link>
+      </div>
+    );
+
     const tagsBlock = (
       <div className="item-single__tags">
         <ul className="item-single__tags-list">
@@ -26,6 +34,7 @@ class PostTemplateDetails extends Component {
 
     return (
       <div>
+        {homeBlock}
         <div className="item-single">
           <div className="item-single__inner">
             <h1 className="item-single__title">{post.frontmatter.title}</h1>
