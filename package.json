@@ -49,8 +49,7 @@
     "prismjs": "^1.15.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-helmet": "^5.2.0",
-    "react-scroll-to-component": "^1.0.2"
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",

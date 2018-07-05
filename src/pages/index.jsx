@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import scrollToComponent from 'react-scroll-to-component';
 import Post from '../components/Post';
 import Menu from '../components/Menu';
 import Sidebar from '../components/Sidebar';
@@ -9,16 +8,6 @@ import Layout from '../components/layout';
 import Favicon from '../assets/favicon.png';
 
 class IndexRoute extends Component {
-  componentWillUpdate() {
-    if (window.innerWidth < 685) {
-      scrollToComponent(this.Content, {
-        offset: 0,
-        align: 'top',
-        duration: 400
-      });
-    }
-  }
-
   render() {
     const items = [];
     const { data } = this.props;
@@ -35,15 +24,12 @@ class IndexRoute extends Component {
           <meta name="description" content={subtitle} />
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
-        <Menu data={menu} />
-        <Sidebar {...this.props} />
-        <div
-          className="content"
-          ref={section => {
-            this.Content = section;
-          }}
-        >
-          <div className="content__inner">{items}</div>
+        <div className="home">
+          <Menu data={menu} />
+          <Sidebar {...this.props} />
+          <div className="content">
+            <div className="content__inner">{items}</div>
+          </div>
         </div>
       </Layout>
     );
@@ -63,6 +49,12 @@ export const pageQuery = graphql`
         menu {
           label
           path
+        }
+        meta {
+          home {
+            heading
+            subtitle
+          }
         }
         author {
           name

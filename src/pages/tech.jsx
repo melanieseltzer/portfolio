@@ -2,23 +2,12 @@ import React, { Component } from 'react';
 import { graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import kebabCase from 'lodash/kebabCase';
-import scrollToComponent from 'react-scroll-to-component';
 import Menu from '../components/Menu';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/layout';
 import Favicon from '../assets/favicon.png';
 
 class TechRoute extends Component {
-  componentWillUpdate() {
-    if (window.innerWidth < 685) {
-      scrollToComponent(this.Content, {
-        offset: -50,
-        align: 'top',
-        duration: 400
-      });
-    }
-  }
-
   render() {
     const { data } = this.props;
     const { title, menu } = data.site.siteMetadata;
@@ -32,12 +21,7 @@ class TechRoute extends Component {
         </Helmet>
         <Menu data={menu} />
         <Sidebar {...this.props} />
-        <div
-          className="content"
-          ref={section => {
-            this.Content = section;
-          }}
-        >
+        <div className="content">
           <div className="content__inner">
             <div className="page">
               <h1 className="page__title">All Tech</h1>

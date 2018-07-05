@@ -7,10 +7,13 @@ import './style.scss';
 
 class Sidebar extends Component {
   render() {
-    const { location } = this.props;
-    const { data } = this.props;
-    const { author, heading, subtitle, copyright } = data.site.siteMetadata;
+    const { location, data } = this.props;
+    const { author, copyright } = data.site.siteMetadata;
+    const { meta } = data.site.siteMetadata;
     const isHomePage = get(location, 'pathname', '/') === '/';
+    const isProjectsPage = get(location, 'pathname') === '/projects';
+    const isAboutPage = get(location, 'pathname') === '/about';
+    const isContactPage = get(location, 'pathname') === '/contact';
 
     /* eslint-disable jsx-a11y/img-redundant-alt */
     const authorBlock = (
@@ -25,11 +28,37 @@ class Sidebar extends Component {
           />
         </Link>
         {isHomePage ? (
-          <h1 className="sidebar__author-title">{heading}</h1>
+          <div>
+            <h1 className="sidebar__author-title">{meta.home.heading}</h1>
+            <p className="sidebar__author-subtitle">{meta.home.subtitle}</p>
+          </div>
         ) : (
-          <h2 className="sidebar__author-title">{heading}</h2>
+          ''
         )}
-        <p className="sidebar__author-subtitle">{subtitle}</p>
+        {isProjectsPage ? (
+          <div>
+            <h1 className="sidebar__author-title">{meta.projects.heading}</h1>
+            <p className="sidebar__author-subtitle">{meta.projects.subtitle}</p>
+          </div>
+        ) : (
+          ''
+        )}
+        {isAboutPage ? (
+          <div>
+            <h1 className="sidebar__author-title">{meta.about.heading}</h1>
+            <p className="sidebar__author-subtitle">{meta.about.subtitle}</p>
+          </div>
+        ) : (
+          ''
+        )}
+        {isContactPage ? (
+          <div>
+            <h1 className="sidebar__author-title">{meta.contact.heading}</h1>
+            <p className="sidebar__author-subtitle">{meta.contact.subtitle}</p>
+          </div>
+        ) : (
+          ''
+        )}
       </div>
     );
     /* eslint-enable jsx-a11y/img-redundant-alt */

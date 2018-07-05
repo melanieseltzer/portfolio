@@ -38,6 +38,16 @@ export const pageQuery = graphql`
         heading
         subtitle
         copyright
+        meta {
+          about {
+            heading
+            subtitle
+          }
+          contact {
+            heading
+            subtitle
+          }
+        }
         menu {
           label
           path

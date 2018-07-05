@@ -9,6 +9,27 @@ module.exports = {
     subtitle:
       "I'm a Front End Developer living in sunny Los Angeles. I enjoy creating cool stuff and learning everything I can in the process 😄",
     copyright: 'Made with ❤️ using Gatsby.js',
+    meta: {
+      home: {
+        heading: "Hi! I'm Melanie 👋",
+        subtitle:
+          "I'm a Front End Developer living in sunny Los Angeles. I enjoy creating cool stuff and learning everything I can in the process 😄"
+      },
+      projects: {
+        heading: 'Projects',
+        subtitle:
+          'I can usually be found tinkering around with something in my spare time 🤓 Here are some of my recent works.'
+      },
+      about: {
+        heading: 'About',
+        subtitle:
+          "Because I know you're curious about the woman behind the website 😎"
+      },
+      contact: {
+        heading: 'Say Hi',
+        subtitle: 'Feel free to reach out!'
+      }
+    },
     menu: [
       {
         label: 'Home',
