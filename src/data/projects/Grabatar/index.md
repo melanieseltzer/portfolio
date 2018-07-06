@@ -12,7 +12,7 @@ description: "A small interface to easily 'grab' your Gravatar 👾"
 repo: "https://github.com/melanieseltzer/grabatar"
 ---
 
-[Live preview](https://grabatar.netlify.com/)
+![grabatar.jpg](./grabatar.jpg)
 
 I decided to create a simple interface to easily 'grab' your Gravatar (see what I did there? 😉) and see it displayed.
 
@@ -20,4 +20,4 @@ The user enters their email address in the form (which is made with the awesome 
 
 The Gravatars are compiled using the hash from the address bar.
 
-![Grabatar.jpg](./Grabatar.jpg)
+<a href="https://grabatar.netlify.com/" target="_blank">Live Site</a> &bull; <a href="https://github.com/melanieseltzer/grabatar" target="_blank">Source Code</a>

@@ -7,7 +7,7 @@
   overflow: hidden;
   &:hover {
     cursor: pointer;
-    transform: scale(1.02);
+    transform: scale(1.01);
     box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.3);
   }
   &:hover &__title-custom {

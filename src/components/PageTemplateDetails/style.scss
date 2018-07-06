@@ -20,7 +20,22 @@
     color: $color-base;
     padding: 2px;
   }
+  .gatsby-resp-image-wrapper,
   .gatsby-resp-image-image {
     border-radius: 50%;
+    overflow: hidden;
+  }
+  &__experience {
+    lost-utility: clearfix;
+    .column {
+      width: 100%;
+      h4, li {
+        margin-top: 0;
+        word-wrap: break-word;
+      }
+      @include breakpoint-sm {
+        lost-column: 1/2;
+      }
+    }
   }
 }
