@@ -5,8 +5,7 @@ module.exports = {
   siteMetadata: {
     url: 'https://melanieseltzer.io',
     title: 'Melanie Seltzer',
-    heading: "Hi! I'm Melanie 👋",
-    subtitle:
+    metaDescription:
       "I'm a Front End Developer living in sunny Los Angeles. I enjoy creating cool stuff and learning everything I can in the process 😄",
     copyright: 'Made with ❤️ using Gatsby.js',
     meta: {

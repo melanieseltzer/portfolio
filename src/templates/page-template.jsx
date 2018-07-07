@@ -9,10 +9,11 @@ import Favicon from '../assets/favicon.png';
 class PageTemplate extends Component {
   render() {
     const { data } = this.props;
-    const { title, subtitle, menu } = data.site.siteMetadata;
+    const { title, metaDescription, menu } = data.site.siteMetadata;
     const page = data.markdownRemark;
     const { title: pageTitle, description: pageDescription } = page.frontmatter;
-    const description = pageDescription !== null ? pageDescription : subtitle;
+    const description =
+      pageDescription !== null ? pageDescription : metaDescription;
 
     return (
       <Layout>
@@ -35,8 +36,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        heading
-        subtitle
+        metaDescription
         copyright
         meta {
           about {

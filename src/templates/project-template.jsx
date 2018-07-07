@@ -9,14 +9,14 @@ import Favicon from '../assets/favicon.png';
 class ProjectTemplate extends Component {
   render() {
     const { data } = this.props;
-    const { title, subtitle, menu } = data.site.siteMetadata;
+    const { title, metaDescription, menu } = data.site.siteMetadata;
     const project = data.markdownRemark;
     const {
       title: projectTitle,
       description: projectDescription
     } = project.frontmatter;
     const description =
-      projectDescription !== null ? projectDescription : subtitle;
+      projectDescription !== null ? projectDescription : metaDescription;
 
     return (
       <Layout>
@@ -39,7 +39,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        subtitle
+        metaDescription
         copyright
         menu {
           label

@@ -11,7 +11,7 @@ class ProjectsRoute extends Component {
   render() {
     const items = [];
     const { data } = this.props;
-    const { title, subtitle, menu } = data.site.siteMetadata;
+    const { title, metaDescription, menu } = data.site.siteMetadata;
     const projects = data.allMarkdownRemark.edges;
     projects.forEach(project => {
       items.push(<Project data={project} key={project.node.fields.slug} />);
@@ -21,7 +21,7 @@ class ProjectsRoute extends Component {
       <Layout>
         <Helmet>
           <title>Projects - {title}</title>
-          <meta name="description" content={subtitle} />
+          <meta name="description" content={metaDescription} />
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
         <Menu data={menu} />
@@ -41,8 +41,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        heading
-        subtitle
+        metaDescription
         copyright
         menu {
           label

@@ -11,7 +11,7 @@ class IndexRoute extends Component {
   render() {
     const items = [];
     const { data } = this.props;
-    const { title, subtitle, menu } = data.site.siteMetadata;
+    const { title, metaDescription, menu } = data.site.siteMetadata;
     const posts = data.allMarkdownRemark.edges;
     posts.forEach(post => {
       items.push(<Post data={post} key={post.node.fields.slug} />);
@@ -21,7 +21,7 @@ class IndexRoute extends Component {
       <Layout>
         <Helmet>
           <title>Hi! - {title}</title>
-          <meta name="description" content={subtitle} />
+          <meta name="description" content={metaDescription} />
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
         <div className="home">
@@ -43,8 +43,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        heading
-        subtitle
+        metaDescription
         copyright
         menu {
           label
