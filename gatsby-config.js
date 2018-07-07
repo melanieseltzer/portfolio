@@ -15,18 +15,19 @@ module.exports = {
           "I'm a Front End Developer living in sunny Los Angeles. I enjoy creating cool stuff and learning everything I can in the process 😄"
       },
       projects: {
-        heading: 'Projects',
+        heading: 'Projects ✍️',
         subtitle:
-          'I can usually be found tinkering around with something in my spare time 🤓 Here are some of my recent works.'
+          'I can usually be found tinkering around with something in my spare time. Here are some of my recent works.'
       },
       about: {
-        heading: 'About',
+        heading: 'About Me 🚀',
         subtitle:
-          "Because I know you're curious about the woman behind the website 😎"
+          "Because I know you're curious about the woman behind the website."
       },
       contact: {
-        heading: 'Contact',
-        subtitle: 'Feel free to reach out!'
+        heading: 'Contact 🙋‍',
+        subtitle:
+          'Feel free to reach out to me via email or through any of the websites below.'
       }
     },
     menu: [

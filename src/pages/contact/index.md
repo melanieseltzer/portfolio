@@ -1,5 +1,5 @@
 ---
-title: "Say Hi 🙋‍"
+title: "Say Hi"
 layout: page
 path: "/contact"
 ---

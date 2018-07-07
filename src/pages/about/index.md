@@ -1,66 +1,207 @@
 ---
-title: "I like stuff and things"
+title: "Aussie, Coder, Emoji lover"
 layout: page
 path: "/about"
 ---
 
-I'm an Aussie developer with 8 years professional industry experience. Although primarily Front End for most of my career, lately I've been dipping my toes in the world of Full Stack and have found I really enjoy it.
+I'm a Web Developer with 8 years industry experience. Although primarily Front End for most of my career, lately I've been dipping my toes in the world of Full Stack and have found I really enjoy it.
 
-I moved to USA in 2010 and have been in Los Angeles ever since. I am currently a Front End developer at <a href="http://still-water.com" target="_blank">Still Water</a> in Santa Monica, CA.
-
-The following is just some of my experience:
-
-<section class="page__experience">
-  <div class="experience__column">
-    <h3 class="experience__header">Languages</h3>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>Javascript</li>
-      <li>JQuery</li>
-      <li>PHP</li>
-      <li>Markdown</li>
-    </ul>
-  </div>
-
-  <div class="experience__column">
-    <h3 class="experience__header">Frameworks/libraries</h3>
-    <ul>
-      <li>React</li>
-      <li>Redux</li>
-      <li>Express</li>
-      <li>GatsbyJS</li>
-      <li>Middleman</li>
-      <li>Bootstrap</li>
-      <li>Bulma</li>
-    </ul>
-  </div>
-
-  <div class="experience__column">
-    <h3 class="experience__header">Templating/preprocessing</h3>
-    <ul>
-      <li>EJS</li>
-      <li>Haml</li>
-      <li>Pug</li>
-      <li>Sass</li>
-      <li>Stylus</li>
-      <li>PostCSS/Autoprefixer</li>
-    </ul>
-  </div>
-
-  <div class="experience__column">
-    <h3 class="experience__header">Tooling</h3>
-    <ul>
-      <li>Git/Github</li>
-      <li>Webpack</li>
-      <li>Gulp</li>
-      <li>Npm</li>
-      <li>Eslint</li>
-      <li>Prettier</li>
-    </ul>
-  </div>
-</section>
-
-When I'm not coding, you can probably find me playing video games, hiking, traveling, or annoying my cat, *Callie* 👇😼
+I moved to USA in 2010 and have been in Los Angeles ever since. I am currently a Front End developer at <a href="http://still-water.com" target="_blank">Still Water</a> in Santa Monica, CA. I live with my wife and our sweet little <strike>demon</strike> cat, *Callie* 👇😼
 
 ![Callie](./callie.jpg)
+
+When I'm not coding, you can probably find me playing video games, hiking, traveling somewhere new, reading, wasting copious amounts of time on Reddit, or <strike>annoying</strike> playing with Callie.
+
+<hr />
+
+## Skills and Experience
+
+<div class="experience">
+
+  ### Languages
+
+  <div class="item-single__tags skills">
+    <ul class="item-single__tags-list">
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          HTML
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          CSS
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Javascript
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          JQuery
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          PHP
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Markdown
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  ### Frameworks and Libraries
+
+  <div class="item-single__tags skills">
+    <ul class="item-single__tags-list">
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          React
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Redux
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Express
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          GatsbyJS
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Middleman
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Bootstrap
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Bulma
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  ### Templating
+
+  <div class="item-single__tags skills">
+    <ul class="item-single__tags-list">
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          EJS
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Haml
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Pug
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  ### Pre and Post Processing
+
+  <div class="item-single__tags skills">
+    <ul class="item-single__tags-list">
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Sass
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Stylus
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          PostCSS/Autoprefixer
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  ### Tooling
+
+  <div class="item-single__tags skills">
+    <ul class="item-single__tags-list">
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Git
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Github
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Command Line
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Webpack
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Gulp
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Npm
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  ### Linting and Testing
+
+  <div class="item-single__tags skills">
+    <ul class="item-single__tags-list">
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Eslint
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Prettier
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Jest
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Mocha
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
