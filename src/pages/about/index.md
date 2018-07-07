@@ -14,9 +14,8 @@ When I'm not coding, you can probably find me playing video games, hiking, trave
 
 <hr />
 
-## Skills and Experience
-
 <div class="experience">
+ <h2 class="page__title-secondary">Skills and Experience</h2>
 
   ### Languages
 

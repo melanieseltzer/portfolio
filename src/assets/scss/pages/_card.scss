@@ -3,6 +3,7 @@
 
 .card {
   border-radius: 5px;
+  border-left: 3px solid $color-secondary;
   transition: .3s ease;
   overflow: hidden;
   &:hover {
@@ -41,7 +42,10 @@
       .item-single__tags {
         padding: 0;
         display: inline-block;
-        ul li {
+        &-list-item {
+          &-link {
+            font-size: 0.8rem;
+          }
           margin-top: 0;
         }
         @include breakpoint-md {

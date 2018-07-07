@@ -9,6 +9,10 @@
     @include line-height(2);
     @include margin-top(0);
     @include margin-bottom(0);
+    &-secondary {
+      display: inline;
+      border-bottom: 3px solid $color-secondary;
+    }
   }
   &__body {
     font-size: $typographic-base-font-size;

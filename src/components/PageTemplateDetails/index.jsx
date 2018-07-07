@@ -13,7 +13,9 @@ class PageTemplateDetails extends Component {
         <section className="content">
           <div className="content__inner">
             <div className="page">
-              <h2 className="page__title">{page.frontmatter.title}</h2>
+              <h2 className="page__title-secondary">
+                {page.frontmatter.title}
+              </h2>
               <div
                 className="page__body"
                 dangerouslySetInnerHTML={{ __html: page.html }}
