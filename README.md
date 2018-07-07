@@ -1,10 +1,12 @@
-# melanieseltzer.io
+# [melanieseltzer.io](https://melanieseltzer.io)
 
-Welcome to my portfolio 👋
+Welcome to my dev portfolio 👋 Here you'll find my posts, projects, and everything about me.
 
-You can see it live [here](https://melanieseltzer.io)
+## Made with ❤️
 
-## Built With ❤️
-
-- [Gatsby.js](https://www.gatsbyjs.org/)
+- [GatsbyJS](https://www.gatsbyjs.org/)
 - [gatsby-starter-lumen](https://github.com/alxshelepenok/gatsby-starter-lumen)
+
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"/>
+</a>
