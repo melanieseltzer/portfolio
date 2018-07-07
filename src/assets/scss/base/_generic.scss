@@ -152,6 +152,14 @@ figcaption {
   }
 }
 
+/* Full width home layout */
+.home .content {
+  &__inner {
+    padding-top: 0;
+  }
+  lost-column: 3/3;
+}
+
 @include breakpoint-sm {
   figure.float-left,
   figure.float-right {

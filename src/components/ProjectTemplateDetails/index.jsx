@@ -13,11 +13,11 @@ class ProjectTemplateDetails extends Component {
     const tech = project.fields.techSlugs;
 
     const homeBlock = (
-      <div>
+      <React.Fragment>
         <Link className="item-single__home-button" to="/projects">
           All Projects
         </Link>
-      </div>
+      </React.Fragment>
     );
 
     const tagsBlock = (
@@ -36,8 +36,8 @@ class ProjectTemplateDetails extends Component {
     );
 
     return (
-      <div>
-        <div className="item-single">
+      <React.Fragment>
+        <section className="item-single">
           <div className="item-single__inner">
             {homeBlock}
             <h1 className="item-single__title">
@@ -66,8 +66,8 @@ class ProjectTemplateDetails extends Component {
             <hr />
             {tagsBlock}
           </div>
-        </div>
-      </div>
+        </section>
+      </React.Fragment>
     );
   }
 }

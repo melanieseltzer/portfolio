@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import { graphql } from 'gatsby';
-import Menu from '../components/Menu';
-import Sidebar from '../components/Sidebar';
+import Header from '../components/Header';
 import Layout from '../components/layout';
 
 class NotFoundRoute extends Component {
   render() {
-    const { data } = this.props;
-    const { menu } = data.site.siteMetadata;
-
     return (
       <Layout>
-        <Menu data={menu} />
-        <div className="content">
+        <Header {...this.props} />
+        <section className="content">
           <div className="content__inner">
             <div className="page">
               <h1 className="page__title">404 NOT FOUND</h1>
@@ -21,7 +17,7 @@ class NotFoundRoute extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </Layout>
     );
   }

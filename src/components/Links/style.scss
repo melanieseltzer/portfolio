@@ -1,6 +1,11 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
 
+/* Full width home layout */
+.home .links {
+  display: inline-block;
+}
+
 .links {
   display: inline-block;
   margin: 0 auto;

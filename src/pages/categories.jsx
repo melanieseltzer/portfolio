@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import kebabCase from 'lodash/kebabCase';
-import Menu from '../components/Menu';
+import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/layout';
 import Favicon from '../assets/favicon.png';
@@ -10,7 +10,7 @@ import Favicon from '../assets/favicon.png';
 class CategoriesRoute extends Component {
   render() {
     const { data } = this.props;
-    const { title, menu } = data.site.siteMetadata;
+    const { title } = data.site.siteMetadata;
     const categories = data.allMarkdownRemark.group;
 
     return (
@@ -19,9 +19,9 @@ class CategoriesRoute extends Component {
           <title>All Categories - {title}</title>
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
-        <Menu data={menu} />
+        <Header {...this.props} />
         <Sidebar {...this.props} />
-        <div className="content">
+        <section className="content">
           <div className="content__inner">
             <div className="page">
               <h1 className="page__title">Categories</h1>
@@ -46,7 +46,7 @@ class CategoriesRoute extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </Layout>
     );
   }

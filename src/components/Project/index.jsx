@@ -33,38 +33,41 @@ class Project extends Component {
     );
 
     return (
-      <div
-        className="card"
-        onClick={() => push(`${slug}`)}
-        onKeyPress={() => push(`${slug}`)}
-        role="button"
-        tabIndex={0}
-      >
-        <div className="card__topContainer">
-          <h2 className="card__title-custom">
-            <span className="card__title-customUnderline">
-              <Link
-                className="card__title-link"
-                to={slug}
-                onClick={this.handleChildClick}
-              >
-                {title}
-              </Link>
-            </span>
-            {techBlock}
-          </h2>
-          <p className="card__description">{description}</p>
+      <article className="card">
+        <div
+          onClick={() => push(`${slug}`)}
+          onKeyPress={() => push(`${slug}`)}
+          role="button"
+          tabIndex={0}
+        >
+          <header className="card__header">
+            <h2 className="card__title-custom">
+              <span className="card__title-customUnderline">
+                <Link
+                  className="card__title-link"
+                  to={slug}
+                  onClick={this.handleChildClick}
+                >
+                  {title}
+                </Link>
+              </span>
+              {techBlock}
+            </h2>
+          </header>
+          <section className="card__content">
+            <p className="card__description">{description}</p>
+          </section>
+          <footer className="card__footer">
+            <Link
+              className="card__button"
+              to={slug}
+              onClick={this.handleChildClick}
+            >
+              View
+            </Link>
+          </footer>
         </div>
-        <div className="card__bottomContainer">
-          <Link
-            className="card__button"
-            to={slug}
-            onClick={this.handleChildClick}
-          >
-            View
-          </Link>
-        </div>
-      </div>
+      </article>
     );
   }
 }

@@ -12,12 +12,12 @@ class CategoryTemplateDetails extends Component {
     });
 
     return (
-      <div className="content">
+      <section className="content">
         <div className="content__inner">
-          <h1 className="card__title">All posts under "{category}"</h1>
+          <h1 className="card__title">All posts in "{category}"</h1>
           <div className="card__body">{items}</div>
         </div>
-      </div>
+      </section>
     );
   }
 }

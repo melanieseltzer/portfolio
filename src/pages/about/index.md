@@ -37,7 +37,7 @@ The following is just some of my experience:
   </div>
 
   <div class="experience__column">
-    <h3 class="experience__header">Templating/pre-processing</h3>
+    <h3 class="experience__header">Templating/preprocessing</h3>
     <ul>
       <li>EJS</li>
       <li>Haml</li>

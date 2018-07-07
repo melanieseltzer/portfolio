@@ -14,41 +14,41 @@ class Sidebar extends Component {
     const isPage = () => {
       if (get(location, 'pathname', '/') === '/') {
         return (
-          <div>
+          <React.Fragment>
             <h1 className="sidebar__author-title">{meta.home.heading}</h1>
             <p className="sidebar__author-subtitle">{meta.home.subtitle}</p>
-          </div>
+          </React.Fragment>
         );
       }
       if (get(location, 'pathname') === '/projects') {
         return (
-          <div>
+          <React.Fragment>
             <h1 className="sidebar__author-title">{meta.projects.heading}</h1>
             <p className="sidebar__author-subtitle">{meta.projects.subtitle}</p>
-          </div>
+          </React.Fragment>
         );
       }
       if (get(location, 'pathname') === '/about') {
         return (
-          <div>
+          <React.Fragment>
             <h1 className="sidebar__author-title">{meta.about.heading}</h1>
             <p className="sidebar__author-subtitle">{meta.about.subtitle}</p>
-          </div>
+          </React.Fragment>
         );
       }
       if (get(location, 'pathname') === '/contact') {
         return (
-          <div>
+          <React.Fragment>
             <h1 className="sidebar__author-title">{meta.contact.heading}</h1>
             <p className="sidebar__author-subtitle">{meta.contact.subtitle}</p>
-          </div>
+          </React.Fragment>
         );
       }
     };
 
     /* eslint-disable jsx-a11y/img-redundant-alt */
     const authorBlock = (
-      <div>
+      <React.Fragment>
         <Link to="/">
           <img
             src={profilePic}
@@ -59,20 +59,20 @@ class Sidebar extends Component {
           />
         </Link>
         {isPage()}
-      </div>
+      </React.Fragment>
     );
     /* eslint-enable jsx-a11y/img-redundant-alt */
 
     return (
-      <div className="sidebar">
+      <section className="sidebar">
         <div className="sidebar__inner">
           <div className="sidebar__author">{authorBlock}</div>
-          <div>
+          <React.Fragment>
             <Links data={author} />
             <p className="sidebar__copyright">{copyright}</p>
-          </div>
+          </React.Fragment>
         </div>
-      </div>
+      </section>
     );
   }
 }

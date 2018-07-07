@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import PostTemplateDetails from '../components/PostTemplateDetails';
-import Menu from '../components/Menu';
+import Header from '../components/Header';
 import Layout from '../components/layout';
 import Favicon from '../assets/favicon.png';
 
 class PostTemplate extends Component {
   render() {
     const { data } = this.props;
-    const { title, metaDescription, menu } = data.site.siteMetadata;
+    const { title, metaDescription } = data.site.siteMetadata;
     const post = data.markdownRemark;
     const { title: postTitle, description: postDescription } = post.frontmatter;
     const description =
@@ -22,7 +22,7 @@ class PostTemplate extends Component {
           <meta name="description" content={description} />
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
-        <Menu data={menu} />
+        <Header {...this.props} />
         <PostTemplateDetails {...this.props} />
       </Layout>
     );

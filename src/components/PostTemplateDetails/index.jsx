@@ -9,11 +9,11 @@ class PostTemplateDetails extends Component {
     const tags = post.fields.tagSlugs;
 
     const homeBlock = (
-      <div>
+      <React.Fragment>
         <Link className="item-single__home-button" to="/">
           All Posts
         </Link>
-      </div>
+      </React.Fragment>
     );
 
     const tagsBlock = (
@@ -32,9 +32,9 @@ class PostTemplateDetails extends Component {
     );
 
     return (
-      <div>
+      <React.Fragment>
         {homeBlock}
-        <div className="item-single">
+        <section className="item-single">
           <div className="item-single__inner">
             <h1 className="item-single__title">{post.frontmatter.title}</h1>
             <div
@@ -51,8 +51,8 @@ class PostTemplateDetails extends Component {
             <hr />
             {tagsBlock}
           </div>
-        </div>
-      </div>
+        </section>
+      </React.Fragment>
     );
   }
 }

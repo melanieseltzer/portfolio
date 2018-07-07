@@ -1,6 +1,16 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
 
+/* Full width home layout */
+.home .sidebar {
+  lost-column: 3/3;
+  &__inner { 
+    lost-center: 600px;
+    padding: 25px 20px 0 20px;
+    text-align: center;
+  }
+}
+
 .sidebar {
   width: 100%;
   &__inner {

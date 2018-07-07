@@ -7,10 +7,12 @@ class Layout extends Component {
     const { children } = this.props;
 
     return (
-      <div className="layout">
-        <Helmet defaultTitle="Melanie Seltzer" />
-        {children}
-      </div>
+      <React.Fragment>
+        <div className="layout">
+          <Helmet defaultTitle="Melanie Seltzer" />
+          {children}
+        </div>
+      </React.Fragment>
     );
   }
 }

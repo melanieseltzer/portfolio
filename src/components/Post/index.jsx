@@ -15,55 +15,58 @@ class Post extends Component {
     const { slug, categorySlug } = data.node.fields;
 
     return (
-      <div
-        className="card"
-        onClick={() => push(`${slug}`)}
-        onKeyPress={() => push(`${slug}`)}
-        role="button"
-        tabIndex={0}
-      >
-        <div className="card__topContainer">
-          <h2 className="card__title-custom">
-            <span className="card__title-customUnderline">
-              <Link
-                className="card__title-link"
-                to={slug}
-                onClick={this.handleChildClick}
+      <article className="card">
+        <div
+          onClick={() => push(`${slug}`)}
+          onKeyPress={() => push(`${slug}`)}
+          role="button"
+          tabIndex={0}
+        >
+          <header className="card__header">
+            <h2 className="card__title-custom">
+              <span className="card__title-customUnderline">
+                <Link
+                  className="card__title-link"
+                  to={slug}
+                  onClick={this.handleChildClick}
+                >
+                  {title}
+                </Link>
+              </span>
+            </h2>
+            <div className="card__meta">
+              <time
+                className="card__meta-time"
+                dateTime={moment(date).format('MMMM D, YYYY')}
               >
-                {title}
-              </Link>
-            </span>
-          </h2>
-          <div className="card__meta">
-            <time
-              className="card__meta-time"
-              dateTime={moment(date).format('MMMM D, YYYY')}
+                {moment(date).format('MMMM YYYY')}
+              </time>
+              - in{' '}
+              <span className="card__meta-category" key={categorySlug}>
+                <Link
+                  to={categorySlug}
+                  onClick={this.handleChildClick}
+                  className="card__meta-category-link"
+                >
+                  {category}
+                </Link>
+              </span>
+            </div>
+          </header>
+          <section className="card__content">
+            <p className="card__description">{description}</p>
+          </section>
+          <footer className="card__footer">
+            <Link
+              className="card__button"
+              to={slug}
+              onClick={this.handleChildClick}
             >
-              {moment(date).format('MMMM YYYY')}
-            </time>
-            <span className="card__meta-divider" />
-            <span className="card__meta-category" key={categorySlug}>
-              <Link
-                to={categorySlug}
-                onClick={this.handleChildClick}
-                className="card__meta-category-link"
-              >
-                {category}
-              </Link>
-            </span>
-          </div>
-          <p className="card__description">{description}</p>
+              Read
+            </Link>
+          </footer>
         </div>
-        <div className="card__bottomContainer">
-          <Link
-            className="card__button"
-            to={slug}
-            onClick={this.handleChildClick}
-          >
-            Read
-          </Link>
-        </div>
-      </div>
+      </article>
     );
   }
 }

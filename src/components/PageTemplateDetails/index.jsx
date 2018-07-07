@@ -8,9 +8,9 @@ class PageTemplateDetails extends Component {
     const page = data.markdownRemark;
 
     return (
-      <div>
+      <React.Fragment>
         <Sidebar {...this.props} />
-        <div className="content">
+        <section className="content">
           <div className="content__inner">
             <div className="page">
               <h2 className="page__title">{page.frontmatter.title}</h2>
@@ -20,8 +20,8 @@ class PageTemplateDetails extends Component {
               />
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </React.Fragment>
     );
   }
 }

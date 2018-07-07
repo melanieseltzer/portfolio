@@ -1,6 +1,11 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
 
+/* Full width home layout */
+.home .card {
+  lost-center: 600px;
+}
+
 .card {
   border-radius: 5px;
   transition: .3s ease;
@@ -72,12 +77,16 @@
       @include line-height(1);
       @include margin-bottom(.75);
   }
-  &__bottomContainer {
+  &__header,
+  &__content {
+    padding: 1rem 2rem 0 2rem;
+  }
+  &__content {
+    padding-top: 0;
+  }
+  &__footer {
     background: hsl(0, 0%, 97%);
     padding: 1rem 2rem 1rem 2rem;
-  }
-  &__topContainer {
-    padding: 1rem 2rem 0 2rem;
   }
   &__meta {
     @include margin-bottom(.75);
@@ -86,9 +95,6 @@
       color: $color-base;
       font-weight: 500;
       text-transform: uppercase;
-    }
-    &-divider {
-      margin: 0 10px;
     }
     &-category {
       &-link {
