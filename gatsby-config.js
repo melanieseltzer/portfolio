@@ -25,7 +25,7 @@ module.exports = {
           "Because I know you're curious about the woman behind the website 😎"
       },
       contact: {
-        heading: 'Say Hi',
+        heading: 'Contact',
         subtitle: 'Feel free to reach out!'
       }
     },
@@ -52,7 +52,8 @@ module.exports = {
       email: 'melleh11@gmail.com',
       twitter: 'melanieseltzer',
       github: 'melanieseltzer',
-      codepen: 'melanieseltzer'
+      codepen: 'melanieseltzer',
+      linkedin: 'melanieseltzer'
     }
   },
   plugins: [

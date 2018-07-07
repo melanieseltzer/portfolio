@@ -2,16 +2,16 @@
 @import "../../assets/scss/mixins";
 
 .card {
-  border-radius: 10px;
+  border-radius: 5px;
   transition: .3s ease;
   overflow: hidden;
   &:hover {
     cursor: pointer;
     transform: scale(1.01);
-    box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.3);
+    box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.2);
   }
-  &:hover &__title-custom {
-    text-decoration: underline;
+  &:hover &__title-customUnderline {
+    border-bottom: 2px dotted $color-gray-bg;
   }
   @include card();
   @include margin-bottom(1.25);

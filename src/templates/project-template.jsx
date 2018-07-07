@@ -45,10 +45,6 @@ export const pageQuery = graphql`
           label
           path
         }
-        author {
-          name
-          twitter
-        }
         url
       }
     }

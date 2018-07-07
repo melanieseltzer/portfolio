@@ -39,13 +39,6 @@ export const pageQuery = graphql`
           label
           path
         }
-        author {
-          name
-          email
-          twitter
-          github
-          codepen
-        }
       }
     }
   }

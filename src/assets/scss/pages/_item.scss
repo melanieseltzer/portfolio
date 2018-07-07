@@ -50,9 +50,9 @@
     }
     & a {
       text-decoration: none;
-      border-bottom: 2px solid $color-primary;
+      border-bottom: 3px dotted $color-primary;
       color: $color-base;
-      padding: 2px;
+      padding: 1px;
     }
     & .gatsby-highlight {
       max-width: $layout-post-single-width;

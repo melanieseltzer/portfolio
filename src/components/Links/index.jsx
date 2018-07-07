@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import fontawesome from '@fortawesome/fontawesome';
 import faGithubAlt from '@fortawesome/fontawesome-free-brands/faGithubAlt';
 import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
+import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin';
 import faCodepen from '@fortawesome/fontawesome-free-brands/faCodepen';
 import faEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
 import './style.scss';
 
-fontawesome.library.add(faGithubAlt, faTwitter, faCodepen, faEnvelope);
+fontawesome.library.add(
+  faGithubAlt,
+  faTwitter,
+  faCodepen,
+  faEnvelope,
+  faLinkedin
+);
 
 class Links extends Component {
   render() {
@@ -16,7 +23,8 @@ class Links extends Component {
       twitter: author.twitter,
       github: author.github,
       email: author.email,
-      codepen: author.codepen
+      codepen: author.codepen,
+      linkedin: author.linkedin
     };
 
     return (
@@ -47,6 +55,15 @@ class Links extends Component {
               rel="noopener noreferrer"
             >
               <i className="fab fa-twitter" />
+            </a>
+          </li>
+          <li className="links__list-item">
+            <a
+              href={`https://www.linkedin.com/in/${links.linkedin}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-linkedin" />
             </a>
           </li>
           <li className="links__list-item">

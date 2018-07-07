@@ -37,11 +37,11 @@
         &:hover,
         &:focus {
           color: $color-primary-lighten;
-          border-bottom: 2px solid $color-primary-lighten;
+          border-bottom: 2px dotted $color-primary-lighten;
         }
         &--active {
           color: $color-primary-lighten;
-          border-bottom: 2px solid $color-primary-lighten;
+          border-bottom: 2px dotted $color-primary-lighten;
         }
       }
     }

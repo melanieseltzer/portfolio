@@ -24,13 +24,15 @@ class Post extends Component {
       >
         <div className="card__topContainer">
           <h2 className="card__title-custom">
-            <Link
-              className="card__title-link"
-              to={slug}
-              onClick={this.handleChildClick}
-            >
-              {title}
-            </Link>
+            <span className="card__title-customUnderline">
+              <Link
+                className="card__title-link"
+                to={slug}
+                onClick={this.handleChildClick}
+              >
+                {title}
+              </Link>
+            </span>
           </h2>
           <div className="card__meta">
             <time

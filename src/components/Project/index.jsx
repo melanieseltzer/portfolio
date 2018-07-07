@@ -42,13 +42,15 @@ class Project extends Component {
       >
         <div className="card__topContainer">
           <h2 className="card__title-custom">
-            <Link
-              className="card__title-link"
-              to={slug}
-              onClick={this.handleChildClick}
-            >
-              {title}
-            </Link>
+            <span className="card__title-customUnderline">
+              <Link
+                className="card__title-link"
+                to={slug}
+                onClick={this.handleChildClick}
+              >
+                {title}
+              </Link>
+            </span>
             {techBlock}
           </h2>
           <p className="card__description">{description}</p>

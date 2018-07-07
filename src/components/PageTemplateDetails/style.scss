@@ -4,11 +4,11 @@
 .page {
   @include margin-bottom(2);
   &__title {
-    font-size: $typographic-base-font-size * 2.5;
+    font-size: $typographic-base-font-size * 1.75;
     font-weight: 500;
     @include line-height(2);
     @include margin-top(0);
-    @include margin-bottom(1.45);
+    @include margin-bottom(0);
   }
   &__body {
     font-size: $typographic-base-font-size;
@@ -16,9 +16,9 @@
     @include margin(0, 0, 1);
   }
   p a {
-    border-bottom: 2px solid $color-primary;
+    border-bottom: 3px dotted $color-primary;
     color: $color-base;
-    padding: 2px;
+    padding: 1px;
   }
   .gatsby-resp-image-wrapper,
   .gatsby-resp-image-image {
@@ -27,15 +27,22 @@
   }
   &__experience {
     lost-utility: clearfix;
-    .column {
-      width: 100%;
-      h4, li {
-        margin-top: 0;
-        word-wrap: break-word;
-      }
-      @include breakpoint-sm {
-        lost-column: 1/2;
-      }
+  }
+}
+.experience {
+  &__column {
+    width: 100%;
+    @include breakpoint-sm {
+      lost-column: 1/2;
     }
+  }
+  &__header, li {
+    word-wrap: break-word;
+  }
+  &__header {
+    margin-top: 1rem;
+  }
+  li {
+    margin-top: 0;
   }
 }

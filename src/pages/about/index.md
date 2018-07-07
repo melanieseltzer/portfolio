@@ -1,18 +1,18 @@
 ---
-title: "I like... stuff and things"
+title: "I like stuff and things"
 layout: page
 path: "/about"
 ---
 
-I'm an Aussie developer with 8 years industry experience. Although primarily Front End for most of my career, lately I've been dipping my toes in the world of Full Stack and found I really enjoy it.
+I'm an Aussie developer with 8 years professional industry experience. Although primarily Front End for most of my career, lately I've been dipping my toes in the world of Full Stack and have found I really enjoy it.
 
 I moved to USA in 2010 and have been in Los Angeles ever since. I am currently a Front End developer at <a href="http://still-water.com" target="_blank">Still Water</a> in Santa Monica, CA.
 
 The following is just some of my experience:
 
 <section class="page__experience">
-  <div class="column">
-    <h4>Languages</h4>
+  <div class="experience__column">
+    <h3 class="experience__header">Languages</h3>
     <ul>
       <li>HTML</li>
       <li>CSS</li>
@@ -23,8 +23,8 @@ The following is just some of my experience:
     </ul>
   </div>
 
-  <div class="column">
-    <h4>Frameworks/libraries</h4>
+  <div class="experience__column">
+    <h3 class="experience__header">Frameworks/libraries</h3>
     <ul>
       <li>React</li>
       <li>Redux</li>
@@ -36,8 +36,8 @@ The following is just some of my experience:
     </ul>
   </div>
 
-  <div class="column">
-    <h4>Templating/pre-processing</h4>
+  <div class="experience__column">
+    <h3 class="experience__header">Templating/pre-processing</h3>
     <ul>
       <li>EJS</li>
       <li>Haml</li>
@@ -48,8 +48,8 @@ The following is just some of my experience:
     </ul>
   </div>
 
-  <div class="column">
-    <h4>Tooling</h4>
+  <div class="experience__column">
+    <h3 class="experience__header">Tooling</h3>
     <ul>
       <li>Git/Github</li>
       <li>Webpack</li>
