@@ -3,7 +3,7 @@ title: ES6 All The Things
 date: "2018-05-25T00:00:00"
 layout: project
 draft: false
-path: "/projects/es6-all-the-things"
+path: "/projects/es6-all-the-things/"
 tech:
   - "Javascript"
   - "GatsbyJS"

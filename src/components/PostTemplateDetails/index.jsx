@@ -33,9 +33,9 @@ class PostTemplateDetails extends Component {
 
     return (
       <React.Fragment>
-        {homeBlock}
         <section className="item-single">
           <div className="item-single__inner">
+            {homeBlock}
             <h1 className="item-single__title">{post.frontmatter.title}</h1>
             <div
               className="item-single__body"

@@ -14,7 +14,7 @@ class ProjectTemplateDetails extends Component {
 
     const homeBlock = (
       <React.Fragment>
-        <Link className="item-single__home-button" to="/projects">
+        <Link className="item-single__home-button" to="/projects/">
           All Projects
         </Link>
       </React.Fragment>

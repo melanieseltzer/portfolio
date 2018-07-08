@@ -3,7 +3,7 @@ title: CSS SNES Controller
 date: "2018-04-05T00:00:00"
 layout: project
 draft: false
-path: "/projects/css-snes-controller"
+path: "/projects/css-snes-controller/"
 tech:
   - "CSS"
 description: "🎮 Recreating the SNES controller with pure CSS."

@@ -3,7 +3,7 @@ title: Weather Forecast
 date: "2018-05-05T00:00:00"
 layout: project
 draft: false
-path: "/projects/weather-forecast"
+path: "/projects/weather-forecast/"
 tech:
   - "React"
   - "Redux"

@@ -36,15 +36,15 @@ module.exports = {
       },
       {
         label: 'Projects',
-        path: '/projects'
+        path: '/projects/'
       },
       {
         label: 'About',
-        path: '/about'
+        path: '/about/'
       },
       {
         label: 'Contact',
-        path: '/contact'
+        path: '/contact/'
       }
     ],
     author: {

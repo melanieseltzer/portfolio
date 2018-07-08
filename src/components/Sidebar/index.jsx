@@ -20,7 +20,7 @@ class Sidebar extends Component {
           </React.Fragment>
         );
       }
-      if (get(location, 'pathname') === '/projects') {
+      if (get(location, 'pathname') === '/projects/') {
         return (
           <React.Fragment>
             <h1 className="sidebar__author-title">{meta.projects.heading}</h1>
@@ -28,7 +28,7 @@ class Sidebar extends Component {
           </React.Fragment>
         );
       }
-      if (get(location, 'pathname') === '/about') {
+      if (get(location, 'pathname') === '/about/') {
         return (
           <React.Fragment>
             <h1 className="sidebar__author-title">{meta.about.heading}</h1>
@@ -36,7 +36,7 @@ class Sidebar extends Component {
           </React.Fragment>
         );
       }
-      if (get(location, 'pathname') === '/contact') {
+      if (get(location, 'pathname') === '/contact/') {
         return (
           <React.Fragment>
             <h1 className="sidebar__author-title">{meta.contact.heading}</h1>

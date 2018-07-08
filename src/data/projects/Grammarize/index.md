@@ -3,7 +3,7 @@ title: Grammarize
 date: "2018-05-01T00:00:00"
 layout: project
 draft: false
-path: "/projects/grammarize"
+path: "/projects/grammarize/"
 tech:
   - "Javascript"
 description: "A small helper function to provide some grammatical context to your numbers."
