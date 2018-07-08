@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
 import CategoryTemplateDetails from '../components/CategoryTemplateDetails';
 import Layout from '../components/layout';
@@ -16,8 +17,11 @@ class CategoryTemplate extends Component {
       <Layout>
         <Helmet title={`${category} - ${title}`} />
         <Header {...this.props} />
-        <Sidebar {...this.props} />
-        <CategoryTemplateDetails {...this.props} />
+        <section className="row">
+          <Sidebar {...this.props} />
+          <CategoryTemplateDetails {...this.props} />
+        </section>
+        <Footer />
       </Layout>
     );
   }
@@ -30,7 +34,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        copyright
         menu {
           label
           path

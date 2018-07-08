@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import PageTemplateDetails from '../components/PageTemplateDetails';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Layout from '../components/layout';
 import Favicon from '../assets/favicon.png';
 
@@ -23,7 +24,10 @@ class PageTemplate extends Component {
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
         <Header {...this.props} />
-        <PageTemplateDetails {...this.props} />
+        <section className="row">
+          <PageTemplateDetails {...this.props} />
+        </section>
+        <Footer />
       </Layout>
     );
   }
@@ -37,7 +41,6 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         metaDescription
-        copyright
         meta {
           about {
             heading

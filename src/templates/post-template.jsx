@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import PostTemplateDetails from '../components/PostTemplateDetails';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Layout from '../components/layout';
 import Favicon from '../assets/favicon.png';
 
@@ -23,7 +24,10 @@ class PostTemplate extends Component {
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
         <Header {...this.props} />
-        <PostTemplateDetails {...this.props} />
+        <section className="row">
+          <PostTemplateDetails {...this.props} />
+        </section>
+        <Footer />
       </Layout>
     );
   }
@@ -37,7 +41,6 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         metaDescription
-        copyright
         menu {
           label
           path

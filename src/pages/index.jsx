@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Post from '../components/Post';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/layout';
@@ -26,11 +27,14 @@ class IndexRoute extends Component {
         </Helmet>
         <Header {...this.props} />
         <div className="home">
-          <Sidebar {...this.props} />
-          <section className="content">
-            <div className="content__inner">{items}</div>
+          <section className="row">
+            <Sidebar {...this.props} />
+            <section className="content">
+              <div className="content__inner">{items}</div>
+            </section>
           </section>
         </div>
+        <Footer />
       </Layout>
     );
   }
@@ -44,7 +48,6 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         metaDescription
-        copyright
         menu {
           label
           path

@@ -8,7 +8,7 @@ import './style.scss';
 class Sidebar extends Component {
   render() {
     const { location, data } = this.props;
-    const { author, copyright } = data.site.siteMetadata;
+    const { author } = data.site.siteMetadata;
     const { meta } = data.site.siteMetadata;
 
     const isPage = () => {
@@ -69,7 +69,6 @@ class Sidebar extends Component {
           <div className="sidebar__author">{authorBlock}</div>
           <React.Fragment>
             <Links data={author} />
-            <p className="sidebar__copyright">{copyright}</p>
           </React.Fragment>
         </div>
       </section>

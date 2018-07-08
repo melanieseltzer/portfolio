@@ -7,7 +7,6 @@ module.exports = {
     title: 'Melanie Seltzer',
     metaDescription:
       "I'm a Front End Developer living in sunny Los Angeles. I enjoy creating cool stuff and learning everything I can in the process 😄",
-    copyright: 'Made with ❤️ using GatsbyJS',
     meta: {
       home: {
         heading: "Hi! I'm Melanie 👋",

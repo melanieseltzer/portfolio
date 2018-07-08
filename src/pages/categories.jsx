@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import kebabCase from 'lodash/kebabCase';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/layout';
 import Favicon from '../assets/favicon.png';
@@ -20,33 +21,38 @@ class CategoriesRoute extends Component {
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
         <Header {...this.props} />
-        <Sidebar {...this.props} />
-        <section className="content">
-          <div className="content__inner">
-            <div className="page">
-              <h1 className="page__title">Categories</h1>
-              <div className="page__body">
-                <div className="categories">
-                  <ul className="categories__list">
-                    {categories.map(category => (
-                      <li
-                        key={category.fieldValue}
-                        className="categories__list-item"
-                      >
-                        <Link
-                          to={`/categories/${kebabCase(category.fieldValue)}/`}
-                          className="categories__list-item-link"
+        <section className="row">
+          <Sidebar {...this.props} />
+          <section className="content">
+            <div className="content__inner">
+              <div className="page">
+                <h1 className="page__title">Categories</h1>
+                <div className="page__body">
+                  <div className="categories">
+                    <ul className="categories__list">
+                      {categories.map(category => (
+                        <li
+                          key={category.fieldValue}
+                          className="categories__list-item"
                         >
-                          {category.fieldValue} ({category.totalCount})
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                          <Link
+                            to={`/categories/${kebabCase(
+                              category.fieldValue
+                            )}/`}
+                            className="categories__list-item-link"
+                          >
+                            {category.fieldValue} ({category.totalCount})
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </section>
+        <Footer />
       </Layout>
     );
   }
@@ -59,7 +65,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        copyright
         menu {
           label
           path

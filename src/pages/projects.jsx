@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Project from '../components/Project';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/layout';
 import Favicon from '../assets/favicon.png';
@@ -25,10 +26,13 @@ class ProjectsRoute extends Component {
           <link key="icon" rel="icon" href={Favicon} />
         </Helmet>
         <Header {...this.props} />
-        <Sidebar {...this.props} />
-        <section className="content">
-          <div className="content__inner">{items}</div>
+        <section className="row">
+          <Sidebar {...this.props} />
+          <section className="content">
+            <div className="content__inner">{items}</div>
+          </section>
         </section>
+        <Footer />
       </Layout>
     );
   }
@@ -42,7 +46,6 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         metaDescription
-        copyright
         menu {
           label
           path

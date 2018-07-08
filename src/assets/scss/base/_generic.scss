@@ -147,9 +147,13 @@ figcaption {
 
 .layout {
   lost-center: $layout-width;
+  .row {
+    lost-utility: clearfix;
+  }
 }
 
 .content {
+  margin-right: 0;
   &__inner {
     padding: 25px 20px;
   }
@@ -157,9 +161,6 @@ figcaption {
 
 /* Full width home layout */
 .home .content {
-  &__inner {
-    padding-top: 0;
-  }
   lost-column: 3/3;
 }
 
