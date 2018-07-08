@@ -6,7 +6,7 @@
   lost-column: 3/3;
   &__inner { 
     lost-center: 600px;
-    padding: 25px 20px 0 20px;
+    padding: 30px 20px 0 20px;
     text-align: center;
   }
 }
@@ -15,7 +15,7 @@
   width: 100%;
   &__inner {
     position: relative;
-    padding: 25px 20px 0;
+    padding: 30px 20px 0;
     text-align: center;
     @include breakpoint-sm {
       text-align: left;
