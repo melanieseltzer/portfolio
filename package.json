@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "portfolio",
   "description": "Dev portfolio of Melanie Seltzer",
-  "author": "Melanie Seltzer <melleh11@gmail.com>",
+  "author": "Melanie Seltzer <hi@melanieseltzer.io>",
   "repository": "git+https://github.com/melanieseltzer/portfolio.git",
   "license": "MIT",
   "browserslist": [

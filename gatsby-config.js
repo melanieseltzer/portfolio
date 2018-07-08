@@ -49,7 +49,7 @@ module.exports = {
     ],
     author: {
       name: 'Melanie',
-      email: 'melleh11@gmail.com',
+      email: 'hi@melanieseltzer.io',
       twitter: 'melanieseltzer',
       github: 'melanieseltzer',
       codepen: 'melanieseltzer',
