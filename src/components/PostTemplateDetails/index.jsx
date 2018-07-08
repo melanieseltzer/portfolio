@@ -7,6 +7,7 @@ class PostTemplateDetails extends Component {
     const { data } = this.props;
     const post = data.markdownRemark;
     const tags = post.fields.tagSlugs;
+    const category = post.fields.categorySlug;
 
     const homeBlock = (
       <React.Fragment>
@@ -43,7 +44,13 @@ class PostTemplateDetails extends Component {
             />
             <div className="item-single__date">
               <em>
-                Published {moment(post.frontmatter.date).format('D MMM YYYY')}
+                Published {moment(post.frontmatter.date).format('D MMM YYYY')} -
+                in{' '}
+                <span className="card__meta-category" key={category}>
+                  <Link to={category} className="card__meta-category-link">
+                    {post.frontmatter.category}
+                  </Link>
+                </span>
               </em>
             </div>
           </div>
