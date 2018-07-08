@@ -3,7 +3,7 @@ const pxtorem = require('postcss-pxtorem');
 
 module.exports = {
   siteMetadata: {
-    url: 'https://melanieseltzer.io',
+    url: 'https://www.melanieseltzer.io',
     title: 'Melanie Seltzer',
     metaDescription:
       "I'm a Front End Developer living in sunny Los Angeles. I enjoy creating cool stuff and learning everything I can in the process 😄",

@@ -1,4 +1,4 @@
-# [melanieseltzer.io](https://melanieseltzer.io)
+# [melanieseltzer.io](https://www.melanieseltzer.io)
 
 Welcome to my dev portfolio 👋 Here you'll find my posts, projects, and everything about me.
 
