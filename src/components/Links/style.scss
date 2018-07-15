@@ -9,7 +9,6 @@
 .links {
   display: inline-block;
   margin: 0 auto;
-  @include margin-bottom(1);
   &__list {
     display: flex;
     list-style: none;
