@@ -67,6 +67,7 @@
     "react/forbid-prop-types": "off",
     "react/no-unescaped-entities": "off",
     "jsx-a11y/accessible-emoji": "off",
+    "jsx-a11y/label-has-for": "off",
     "react/jsx-filename-extension": [
       "warn",
       {

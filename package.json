@@ -20,6 +20,7 @@
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
     "@fortawesome/fontawesome-free-regular": "^5.0.13",
     "bluebird": "^3.5.1",
+    "formik": "^1.0.1",
     "gatsby": "^2.0.0-beta.19",
     "gatsby-plugin-catch-links": "^2.0.2-beta.2",
     "gatsby-plugin-google-analytics": "^2.0.0-beta.2",
@@ -44,7 +45,8 @@
     "prismjs": "^1.15.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "yup": "^0.25.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",

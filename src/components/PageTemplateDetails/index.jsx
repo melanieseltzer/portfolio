@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Sidebar from '../Sidebar';
+import ContactForm from '../ContactForm';
 import './style.scss';
 
 class PageTemplateDetails extends Component {
@@ -20,6 +21,8 @@ class PageTemplateDetails extends Component {
                 className="page__body"
                 dangerouslySetInnerHTML={{ __html: page.html }}
               />
+
+              {page.frontmatter.path === '/contact' ? <ContactForm /> : ''}
             </div>
           </div>
         </section>

@@ -26,7 +26,7 @@ module.exports = {
       contact: {
         heading: 'Contact 🙋‍',
         subtitle:
-          'Feel free to reach out to me via email or through any of the websites below.'
+          "Feel free to reach out to me here or through any of the websites below. I'll get back to you asap!"
       }
     },
     menu: [
