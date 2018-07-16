@@ -9,11 +9,12 @@
   textarea,
   input {
     background: #e3e3e3;
-    border: 0;
+    border: 1px solid transparent;
     border-radius: 15px;
-    box-sizing:border-box;
+    box-sizing: border-box;
     height: 20px;
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    outline: none;
     padding: 1.5rem 1rem;
     width: 100%;
   }
@@ -25,9 +26,11 @@
     background: $primary-gradient;
     color: #ffdcd6;
     border-radius: 15px;
-    border: 0;
+    border: 1px solid transparent;
     height: 40px;
-    width: 100px;
+    margin-top: 1.5rem;
+    outline: none;
+    width: 110px;
     transition: .3s ease;
     &:hover,
     &:focus {
@@ -38,5 +41,17 @@
   }
   .errors {
     color: red;
+    display: block;
+  }
+  #messages {
+    margin-left: 1rem;
+    font-style: italic;
+  }
+  input[type=text]:focus, 
+  input[type=email]:focus, 
+  textarea:focus,
+  button:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
   }
 }
