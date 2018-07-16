@@ -1,0 +1,42 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.form__contact {
+  input,
+  textarea {
+    display: block;
+  }
+  textarea,
+  input {
+    background: #e3e3e3;
+    border: 0;
+    border-radius: 15px;
+    box-sizing:border-box;
+    height: 20px;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 1rem;
+    width: 100%;
+  }
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+  button {
+    background: $primary-gradient;
+    color: #ffdcd6;
+    border-radius: 15px;
+    border: 0;
+    height: 40px;
+    width: 100px;
+    transition: .3s ease;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: #ffdcd6;
+      transform: scale(1.05);
+    }
+  }
+  .errors {
+    color: red;
+  }
+}
