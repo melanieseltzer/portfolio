@@ -54,7 +54,7 @@ When I'm not coding, you can probably find me playing video games, hiking, trave
     </ul>
   </div>
 
-  ### Frameworks and Libraries
+  ### Frameworks / libraries / generators
 
   <div class="item-single__tags skills">
     <ul class="item-single__tags-list">
@@ -75,7 +75,7 @@ When I'm not coding, you can probably find me playing video games, hiking, trave
       </li>
       <li class="item-single__tags-list-item">
         <span class="item-single__tags-list-item-link skills__tag">
-          GatsbyJS
+          Gatsby.js
         </span>
       </li>
       <li class="item-single__tags-list-item">
@@ -96,10 +96,15 @@ When I'm not coding, you can probably find me playing video games, hiking, trave
     </ul>
   </div>
 
-  ### Templating
+  ### Templating / pre + post processing 
 
   <div class="item-single__tags skills">
     <ul class="item-single__tags-list">
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Pug
+        </span>
+      </li>
       <li class="item-single__tags-list-item">
         <span class="item-single__tags-list-item-link skills__tag">
           EJS
@@ -112,18 +117,6 @@ When I'm not coding, you can probably find me playing video games, hiking, trave
       </li>
       <li class="item-single__tags-list-item">
         <span class="item-single__tags-list-item-link skills__tag">
-          Pug
-        </span>
-      </li>
-    </ul>
-  </div>
-
-  ### Pre and Post Processing
-
-  <div class="item-single__tags skills">
-    <ul class="item-single__tags-list">
-      <li class="item-single__tags-list-item">
-        <span class="item-single__tags-list-item-link skills__tag">
           Sass
         </span>
       </li>
@@ -134,7 +127,7 @@ When I'm not coding, you can probably find me playing video games, hiking, trave
       </li>
       <li class="item-single__tags-list-item">
         <span class="item-single__tags-list-item-link skills__tag">
-          PostCSS/Autoprefixer
+          Autoprefixer
         </span>
       </li>
     </ul>
@@ -171,13 +164,18 @@ When I'm not coding, you can probably find me playing video games, hiking, trave
       </li>
       <li class="item-single__tags-list-item">
         <span class="item-single__tags-list-item-link skills__tag">
-          Npm
+          npm
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Yarn
         </span>
       </li>
     </ul>
   </div>
 
-  ### Linting and Testing
+  ### Linting / testing / type checking
 
   <div class="item-single__tags skills">
     <ul class="item-single__tags-list">
@@ -198,7 +196,12 @@ When I'm not coding, you can probably find me playing video games, hiking, trave
       </li>
       <li class="item-single__tags-list-item">
         <span class="item-single__tags-list-item-link skills__tag">
-          Mocha
+          Mocha/Chai
+        </span>
+      </li>
+      <li class="item-single__tags-list-item">
+        <span class="item-single__tags-list-item-link skills__tag">
+          Flow
         </span>
       </li>
     </ul>
