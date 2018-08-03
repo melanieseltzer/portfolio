@@ -9,6 +9,17 @@
     padding: 30px 20px 0 20px;
     text-align: center;
   }
+  @include breakpoint-sm {
+    &__author {
+      &-title {
+        font-size: 3rem;
+      }
+      &-subtitle {
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+      }
+    }
+  }
 }
 
 .sidebar {
@@ -47,9 +58,9 @@
       }
     }
     &-subtitle {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: $color-base;
-      @include line-height(1.1);
+      @include line-height(1.2);
       @include margin-bottom(1);
     }
   }
@@ -83,7 +94,7 @@
   .sidebar {
     lost-column: 1/3;
     &__inner {
-      padding: 40px;
+      padding: 40px 20px;
     }
   }
 }

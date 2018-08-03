@@ -1,6 +1,12 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
 
+/* Full width home layout */
+.home .card {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
 .card {
   border-radius: 5px;
   border-left: 3px solid $color-secondary;

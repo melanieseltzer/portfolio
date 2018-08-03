@@ -15,8 +15,8 @@
     }
   }
   &__body {
-    font-size: $typographic-base-font-size;
-    @include line-height(1);
+    font-size: $typographic-base-font-size * 1.2;
+    @include line-height(1.2);
     @include margin(0, 0, 1);
   }
   p a {
