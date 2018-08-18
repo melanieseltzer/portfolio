@@ -15,7 +15,9 @@ class TechTemplateDetails extends Component {
       <section className="content">
         <div className="content__inner">
           <h1 className="card__title">
-            Projects made with: &quot;{techTitle}&quot;
+            Projects made with: &quot;
+            {techTitle}
+            &quot;
           </h1>
           <div className="card__body">{items}</div>
         </div>

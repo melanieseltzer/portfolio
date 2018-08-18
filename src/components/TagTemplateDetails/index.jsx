@@ -14,7 +14,11 @@ class TagTemplateDetails extends Component {
     return (
       <section className="content">
         <div className="content__inner">
-          <h1 className="card__title">Posts tagged: &quot;{tagTitle}&quot;</h1>
+          <h1 className="card__title">
+            Posts tagged: &quot;
+            {tagTitle}
+            &quot;
+          </h1>
           <div className="card__body">{items}</div>
         </div>
       </section>

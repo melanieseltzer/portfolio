@@ -12,7 +12,7 @@ class Menu extends Component {
         {menu.map(item => (
           <li className="menu__list-item" key={item.path}>
             <Link
-              exact
+              exact="true"
               to={item.path}
               className="menu__list-item-link"
               activeClassName="menu__list-item-link menu__list-item-link--active"

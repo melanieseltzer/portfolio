@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, push } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 
 class Project extends Component {
   // If we didn't have this, clicking on the tags
@@ -35,8 +35,8 @@ class Project extends Component {
     return (
       <article className="card">
         <div
-          onClick={() => push(`${slug}`)}
-          onKeyPress={() => push(`${slug}`)}
+          onClick={() => navigate(`${slug}`)}
+          onKeyPress={() => navigate(`${slug}`)}
           role="button"
           tabIndex={0}
         >

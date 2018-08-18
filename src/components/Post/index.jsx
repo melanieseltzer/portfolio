@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, push } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import moment from 'moment';
 
 class Post extends Component {
@@ -17,8 +17,8 @@ class Post extends Component {
     return (
       <article className="card">
         <div
-          onClick={() => push(`${slug}`)}
-          onKeyPress={() => push(`${slug}`)}
+          onClick={() => navigate(`${slug}`)}
+          onKeyPress={() => navigate(`${slug}`)}
           role="button"
           tabIndex={0}
         >
