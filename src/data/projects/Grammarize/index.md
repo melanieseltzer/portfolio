@@ -14,4 +14,4 @@ Have you ever needed to display some sort of count (e.g. how many new messages a
 
 Grammarize helps with that. Simply feed it a numerical input, and what you want the singular and plural text to say, and it will automatically switch between them as needed.
 
-<a href="https://www.npmjs.com/package/grammarize" target="_blank">Download on NPM</a> &bull; <a href="https://github.com/melanieseltzer/grammarize" target="_blank">Source Code</a>
+<a href="https://www.npmjs.com/package/grammarize" target="_blank">Download on npm</a> &bull; <a href="https://github.com/melanieseltzer/grammarize" target="_blank">Source Code</a>
