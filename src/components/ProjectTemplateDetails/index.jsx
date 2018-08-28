@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import moment from 'moment';
-import fontawesome from '@fortawesome/fontawesome';
-import faGithubAlt from '@fortawesome/fontawesome-free-brands/faGithubAlt';
 
-fontawesome.library.add(faGithubAlt);
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faGithubAlt);
 
 class ProjectTemplateDetails extends Component {
   render() {
@@ -48,7 +50,7 @@ class ProjectTemplateDetails extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-github-alt" />
+                <FontAwesomeIcon icon={faGithubAlt} size="2x" />
               </a>
             </h1>
             <div
