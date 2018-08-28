@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import fontawesome from '@fortawesome/fontawesome';
-import faGithubAlt from '@fortawesome/fontawesome-free-brands/faGithubAlt';
-import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
-import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin';
-import faCodepen from '@fortawesome/fontawesome-free-brands/faCodepen';
-import faEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
-import './style.scss';
 
-fontawesome.library.add(
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import {
   faGithubAlt,
   faTwitter,
-  faCodepen,
-  faEnvelope,
-  faLinkedin
-);
+  faLinkedin,
+  faCodepen
+} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
+import './style.scss';
+
+library.add(faGithubAlt, faTwitter, faCodepen, faEnvelope, faLinkedin);
 
 class Links extends Component {
   render() {
@@ -36,7 +35,7 @@ class Links extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-github-alt" />
+              <FontAwesomeIcon icon={faGithubAlt} size="2x" />
             </a>
           </li>
           <li className="links__list-item">
@@ -45,7 +44,7 @@ class Links extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-codepen" />
+              <FontAwesomeIcon icon={faCodepen} size="2x" />
             </a>
           </li>
           <li className="links__list-item">
@@ -54,7 +53,7 @@ class Links extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-twitter" />
+              <FontAwesomeIcon icon={faTwitter} size="2x" />
             </a>
           </li>
           <li className="links__list-item">
@@ -63,12 +62,12 @@ class Links extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-linkedin" />
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
           </li>
           <li className="links__list-item">
             <a href={`mailto:${links.email}`}>
-              <i className="far fa-envelope" />
+              <FontAwesomeIcon icon={faEnvelope} size="2x" />
             </a>
           </li>
         </ul>
