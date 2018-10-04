@@ -13,7 +13,9 @@
   "scripts": {
     "clean": "rm -rf public",
     "lint": "./node_modules/.bin/eslint --cache --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
@@ -46,7 +48,8 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
-    "yup": "^0.26.2"
+    "yup": "^0.26.2",
+    "snyk": "^1.100.1"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
@@ -63,5 +66,6 @@
     "gatsby",
     "blog",
     "react"
-  ]
+  ],
+  "snyk": true
 }
