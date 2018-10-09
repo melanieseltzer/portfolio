@@ -175,15 +175,5 @@
       @include line-height(2.25);
       @include margin-bottom(1.5);
     }
-    &__body {
-      font-size: $typographic-base-font-size * 1.2;
-      @include line-height(1.2);
-      @include margin-bottom(1.2);
-      & p {
-        font-size: $typographic-base-font-size * 1.2;
-        @include line-height(1.2);
-        @include margin-bottom(1.2);
-      }
-    }
   }
 }
