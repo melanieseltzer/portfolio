@@ -63,7 +63,7 @@ class Project extends Component {
               to={slug}
               onClick={this.handleChildClick}
             >
-              View
+              View Project
             </Link>
           </footer>
         </div>
