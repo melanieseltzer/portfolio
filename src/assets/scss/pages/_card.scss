@@ -8,17 +8,13 @@
 }
 
 .card {
-  border-radius: 5px;
+  border-radius: 10px;
   border-left: 3px solid $color-secondary;
-  transition: .3s ease;
+  transition: .2s ease;
   overflow: hidden;
   &:hover {
     cursor: pointer;
     transform: scale(1.01);
-    box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.2);
-  }
-  &:hover &__title-customUnderline {
-    border-bottom: 2px dotted $color-gray-bg;
   }
   @include card();
   @include margin-bottom(1.25);
@@ -30,12 +26,14 @@
     background: $primary-gradient;
     color: #ffdcd6;
     border-radius: 15px;
-    display: block;
-    max-width: 70px;
-    padding: 0.2rem;
     bottom: 1rem;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0.2rem;
     right: 1rem;
     text-align: center;
+    width: 110px;
     &:hover,
     &:focus {
       background: $color-secondary;

@@ -62,7 +62,7 @@ class Post extends Component {
               to={slug}
               onClick={this.handleChildClick}
             >
-              Read
+              Read Post
             </Link>
           </footer>
         </div>

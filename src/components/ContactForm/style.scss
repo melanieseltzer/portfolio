@@ -8,18 +8,19 @@
   }
   textarea,
   input {
-    background: #e3e3e3;
-    border: 1px solid transparent;
-    border-radius: 15px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 10px rgba(94, 94, 94, 0.1);
     box-sizing: border-box;
-    height: 20px;
+    height: 50px;
     margin-top: 1.5rem;
     outline: none;
     padding: 1.5rem 1rem;
     width: 100%;
   }
   textarea {
-    height: 100px;
+    height: 150px;
     resize: none;
   }
   button {
@@ -31,17 +32,17 @@
     margin-top: 1.5rem;
     outline: none;
     width: 110px;
-    transition: .3s ease;
     &:hover,
     &:focus {
       cursor: pointer;
+      background: $color-secondary;
       color: #ffdcd6;
-      transform: scale(1.05);
     }
   }
   .errors {
-    color: red;
+    color: #FF6448;
     display: block;
+    padding-top: 5px;
   }
   #messages {
     margin-left: 1rem;
@@ -51,7 +52,7 @@
   input[type=email]:focus, 
   textarea:focus,
   button:focus {
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    border: 1px solid rgba(81, 203, 238, 1);
+    border: 1px solid rgba(255, 120, 16, 0.3);
+    box-shadow: 0 0 30px 5px rgba(255, 120, 16, 0.3);
   }
 }
