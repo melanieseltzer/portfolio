@@ -24,6 +24,7 @@ class ProjectTemplateDetails extends Component {
 
     const tagsBlock = (
       <div className="item-single__tags">
+        Tagged:
         <ul className="item-single__tags-list">
           {tech &&
             tech.map((tag, i) => (
@@ -53,16 +54,16 @@ class ProjectTemplateDetails extends Component {
                 <FontAwesomeIcon icon={faGithubAlt} size="2x" />
               </a>
             </h1>
-            <div
-              className="item-single__body"
-              dangerouslySetInnerHTML={{ __html: project.html }}
-            />
             <div className="item-single__date">
               <em>
                 Published{' '}
                 {moment(project.frontmatter.date).format('D MMM YYYY')}
               </em>
             </div>
+            <div
+              className="item-single__body"
+              dangerouslySetInnerHTML={{ __html: project.html }}
+            />
           </div>
           <div className="item-single__footer">
             <hr />
