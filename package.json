@@ -3,7 +3,7 @@
   "name": "portfolio",
   "description": "Dev portfolio of Melanie Seltzer",
   "author": "Melanie Seltzer <hi@melanieseltzer.io>",
-  "repository": "git+https://github.com/melanieseltzer/portfolio.git",
+  "repository": "https://github.com/melanieseltzer/portfolio",
   "license": "MIT",
   "browserslist": [
     "Last 2 versions",
@@ -11,6 +11,9 @@
     "IE 10"
   ],
   "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
     "clean": "rm -rf public",
     "lint": "./node_modules/.bin/eslint --cache --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1"
