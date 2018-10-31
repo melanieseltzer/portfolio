@@ -19,6 +19,7 @@ class PostTemplateDetails extends Component {
 
     const tagsBlock = (
       <div className="item-single__tags">
+        Tagged:
         <ul className="item-single__tags-list">
           {tags &&
             tags.map((tag, i) => (
@@ -38,10 +39,6 @@ class PostTemplateDetails extends Component {
           <div className="item-single__inner">
             {homeBlock}
             <h1 className="item-single__title">{post.frontmatter.title}</h1>
-            <div
-              className="item-single__body"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
             <div className="item-single__date">
               <em>
                 Published {moment(post.frontmatter.date).format('D MMM YYYY')} -
@@ -53,6 +50,10 @@ class PostTemplateDetails extends Component {
                 </span>
               </em>
             </div>
+            <div
+              className="item-single__body"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
           </div>
           <div className="item-single__footer">
             <hr />
