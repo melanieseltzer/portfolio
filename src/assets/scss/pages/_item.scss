@@ -55,7 +55,6 @@
       padding: 1px;
     }
     & .gatsby-highlight {
-      max-width: $layout-post-single-max-width - 100px;
       margin-left: 15px;
       margin-right: 15px;
       @include margin-bottom(1);
