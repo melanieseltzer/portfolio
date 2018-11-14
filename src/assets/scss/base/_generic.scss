@@ -166,25 +166,6 @@ figcaption {
   lost-column: 3/3;
 }
 
-/* Prism.js overrides */
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #e3e3e3 !important;
-}
-
-:not(pre) > code[class*="language-"] {
-  padding: 0 !important;
-  border-radius: 0 !important;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  background: #e3e3e3 !important;
-}
-
 @include breakpoint-sm {
   figure.float-left,
   figure.float-right {
