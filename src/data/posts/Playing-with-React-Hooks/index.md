@@ -11,15 +11,13 @@ tags:
 description: "React Hooks were just announced and useReducer in particular has me excited!"
 ---
 
-Last week at [React Conf 2018](https://conf.reactjs.org/) the team announced a new proposal for [React Hooks](https://reactjs.org/docs/hooks-intro.html), a new API that allows you to use state and other features more directly without the need for classes. There are no breaking changes and it's completely opt-in, so if you're not _hooked_ just yet (heh) you don't have to use them and can continue using classes, no problems. Pretty exciting stuff!
+Last week at <a href="https://conf.reactjs.org/" target="_blank">React Conf 2018</a> the team announced a new proposal for <a href="https://reactjs.org/docs/hooks-intro.html" target="_blank">React Hooks</a>, a new API that allows you to use state and other features more directly without the need for classes. There are no breaking changes and it's completely opt-in, so if you're not _hooked_ just yet (heh) you don't have to use them and can continue using classes, no problems. Pretty exciting stuff!
 
-It's currently only in the proposal stage but if you're like me you love playing around with new features, so you can start integrating them right now with the React [v16.7.0-alpha.0](https://www.npmjs.com/package/react/v/16.7.0-alpha.0) release.
+It's currently only in the proposal stage but if you're like me you love playing around with new features, so you can start integrating them right now with the React <a href="https://www.npmjs.com/package/react/v/16.7.0-alpha.0" target="_blank">v16.7.0-alpha.0</a> release.
 
 One hook in particular has me pretty excited, and that is `useReducer`. It offers Redux-like functionality without needing to bring in a separate state management package 😮 Really cool!
 
-With `useReducer` we get the current state along with a matching dispatch method. This is particularly useful with the new `useContext` hook, as I discovered while playing around with the two together over the weekend. I created [a simple little app](https://react-hooks.netlify.com/) that allows you to update the width, height and background of a square. 
-
-![App](./app.jpg)
+With `useReducer` we get the current state along with a matching dispatch method. This is particularly useful with the new `useContext` hook, as I discovered while playing around with the two together over the weekend. I created <a href="https://react-hooks.netlify.com/" target="_blank">a simple little app</a> that allows you to update the width, height and background of a square.
 
 Inside `Context.js` we initialize the context and create the reducer, and also create the provider component (`AppContextProvider`) which wraps around the `Controls` and `Square` components (they are siblings). This means when the context is updated via the Controls component, Square is able to get the updates without having to pass any props down. Pretty cool 😃 
 
@@ -152,11 +150,11 @@ export default function Square() {
 // And use within the styled-component
 const SquareStyle = styled.div`
   background: ${props => props.activeColor};
-  height: ${props => `${props.height}px`};
-  width: ${props => `${props.width}px`};
+  height: ${props => props.height + 'px'};
+  width: ${props => props.width + 'px'};
 `;
 ```
 
 After some inevitable initial confusion, I feel like ultimately hooks are pretty intuitive to me. I'm excited to see where things go and welcome the new addition to React. Will definitely be using them down the line when they are officially released.
 
-Thanks for reading, and if you want to dive deeper into the above, the code is available on [Github](https://github.com/melanieseltzer/react-hooks) 👍
+Thanks for reading, and if you want to dive deeper into the above, the code is available on <a href="https://github.com/melanieseltzer/react-hooks" target="_blank">Github</a> 👍
