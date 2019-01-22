@@ -1,4 +1,4 @@
-# [Portfolio v1](https://melanieseltzer-portfolio-v1.netlify.com/)
+# Portfolio v1
 
 Welcome to my dev portfolio 👋 Here you'll find my posts, projects, and everything about me.
 
